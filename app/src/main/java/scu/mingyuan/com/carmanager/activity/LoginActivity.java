@@ -1,5 +1,6 @@
 package scu.mingyuan.com.carmanager.activity;
 
+import android.app.ProgressDialog;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -34,6 +35,9 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 
     private Button login_btn;
     private Button btn_forget_password;
+
+    // 登录dialog
+    private ProgressDialog logindialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -184,6 +188,11 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     }
 
     private void login() {
+
+        logindialog = new ProgressDialog(LoginActivity.this);
+        logindialog.setMessage("登录中，请稍后");
+        logindialog.show();
+
         String username = account_edit.getText().toString();
         String password = password_edit.getText().toString();
 
@@ -194,11 +203,14 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             @Override
             public void onSuccess() {
                 Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_LONG).show();
+                HomeActivity.startActivity(LoginActivity.this);
+                logindialog.dismiss();
             }
 
             @Override
             public void onFailure(int code, String msg) {
                 Toast.makeText(LoginActivity.this, "登录失败：" + code + "," + msg, Toast.LENGTH_LONG).show();
+                logindialog.dismiss();
             }
         });
     }

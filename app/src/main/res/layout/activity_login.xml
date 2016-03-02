@@ -91,6 +91,7 @@
                 android:background="@color/transparent"
                 android:gravity="center_vertical"
                 android:hint="@string/hint_account"
+                android:imeOptions="actionSend"
                 android:inputType="phone"
                 android:singleLine="true"
                 android:textSize="14sp" />
@@ -140,6 +141,7 @@
                 android:background="@color/transparent"
                 android:gravity="center_vertical"
                 android:hint="@string/hint_password"
+                android:imeOptions="actionSend"
                 android:inputType="textPassword"
                 android:singleLine="true"
                 android:textSize="14sp" />

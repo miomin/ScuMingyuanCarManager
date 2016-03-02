@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/nav_header_layout"
     android:layout_width="match_parent"
     android:layout_height="@dimen/nav_header_height"
     android:background="@drawable/side_nav_bar"
@@ -15,8 +16,7 @@
         android:id="@+id/ivUserHead"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:src="@drawable/defaul_head" />
+        android:paddingTop="@dimen/nav_header_vertical_spacing" />
 
     <TextView
         android:id="@+id/tvUserName"

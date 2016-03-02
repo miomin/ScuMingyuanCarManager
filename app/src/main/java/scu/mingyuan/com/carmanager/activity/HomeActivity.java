@@ -1,5 +1,7 @@
 package scu.mingyuan.com.carmanager.activity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -10,19 +12,32 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import scu.mingyuan.com.carmanager.R;
 import scu.mingyuan.com.carmanager.baseactivity.BaseActivity;
+import scu.mingyuan.com.carmanager.bean.MyUser;
 import scu.mingyuan.com.carmanager.fragment.MapFragment;
 import scu.mingyuan.com.carmanager.fragment.MusicFragment;
 import scu.mingyuan.com.carmanager.fragment.MyCarFragment;
 import scu.mingyuan.com.carmanager.fragment.OrderFragment;
+import scu.mingyuan.com.carmanager.util.MyImageLoader;
 
 /**
  * Created by 莫绪旻 on 16/2/29.
- *
  */
 public class HomeActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+    private NavigationView nav_home;
+    private View nav_header_layout;
+    private ImageView ivUserHead;
+
+    public static void startActivity(Context context) {
+        Intent intent = new Intent(context, HomeActivity.class);
+        context.startActivity(intent);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +65,19 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
         Fragment fragment = MapFragment.newInstance();
         fragmentTransaction.add(R.id.fragmentContainer, fragment);
         fragmentTransaction.commit();
+
+        initView();
+
+        MyUser currentUser = MyUser.getCurrentUser(this, MyUser.class);
+        Toast.makeText(this, "username:" + currentUser.getUsername() + "nick:" + currentUser.getNick(), Toast.LENGTH_LONG).show();
+    }
+
+    private void initView() {
+        nav_home = (NavigationView) findViewById(R.id.nav_home);
+        nav_header_layout = nav_home.getHeaderView(0);
+        // 加载头像
+        ivUserHead = (ImageView) nav_header_layout.findViewById(R.id.ivUserHead);
+        MyImageLoader.getInstance().dispalyFromAssets("13558868295.png", ivUserHead);
     }
 
 
