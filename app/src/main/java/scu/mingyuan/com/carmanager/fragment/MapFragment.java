@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
+import com.baidu.mapapi.map.MapView;
+
 import scu.mingyuan.com.carmanager.R;
 
 /**
@@ -50,10 +52,10 @@ public class MapFragment extends Fragment {
         //yjk
         fragmentView = inflater.inflate(R.layout.fragment_map, container, false);
 
-//        MapView view = new MapView(getContext());
+        MapView view = new MapView(getContext());
 
         findView();
 
-        return fragmentView;
+        return view;
     }
 }
