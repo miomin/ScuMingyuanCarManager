@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_home"
+            android:title="@string/drawer_home" />
+
+        <item
+            android:id="@+id/nav_mycar"
+            android:icon="@drawable/ic_menu_mycar"
+            android:title="@string/drawer_mycar" />
+
+        <item
+            android:id="@+id/nav_order"
+            android:icon="@drawable/ic_menu_order"
+            android:title="@string/drawer_order" />
+
+        <item
+            android:id="@+id/nav_music"
+            android:icon="@drawable/ic_menu_music"
+            android:title="@string/drawer_music" />
+
+        <item
+            android:id="@+id/nav_query"
+            android:icon="@drawable/ic_menu_query"
+            android:title="@string/drawer_query" />
+    </group>
+
+    <item
+        android:id="@+id/nav_setting"
+        android:icon="@drawable/ic_menu_setting"
+        android:title="@string/drawer_setting" />
+
+</menu>

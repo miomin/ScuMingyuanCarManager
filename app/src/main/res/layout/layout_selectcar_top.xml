@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:background="@color/whiteLight"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="热门品牌"
+        android:textColor="@color/blackLight"
+        android:textSize="12sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/whiteDivideLine" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawablePadding="-8dp"
+            android:drawableTop="@drawable/ic_menu_order"
+            android:paddingTop="8dp"
+            android:text="大众"
+            android:textColor="@color/blackLight"
+            android:textSize="12sp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawablePadding="-8dp"
+            android:drawableTop="@drawable/ic_menu_order"
+            android:paddingTop="8dp"
+            android:text="丰田"
+            android:textColor="@color/blackLight"
+            android:textSize="12sp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawablePadding="-8dp"
+            android:drawableTop="@drawable/ic_menu_order"
+            android:paddingTop="8dp"
+            android:text="本田"
+            android:textColor="@color/blackLight"
+            android:textSize="12sp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawablePadding="-8dp"
+            android:drawableTop="@drawable/ic_menu_order"
+            android:paddingTop="8dp"
+            android:text="现代"
+            android:textColor="@color/blackLight"
+            android:textSize="12sp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawablePadding="-8dp"
+            android:drawableTop="@drawable/ic_menu_order"
+            android:paddingTop="8dp"
+            android:text="奥迪"
+            android:textColor="@color/blackLight"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawablePadding="-8dp"
+            android:drawableTop="@drawable/ic_menu_order"
+            android:paddingTop="8dp"
+            android:text="别克"
+            android:textColor="@color/blackLight"
+            android:textSize="12sp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawablePadding="-8dp"
+            android:drawableTop="@drawable/ic_menu_order"
+            android:paddingTop="8dp"
+            android:text="福特"
+            android:textColor="@color/blackLight"
+            android:textSize="12sp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawablePadding="-8dp"
+            android:drawableTop="@drawable/ic_menu_order"
+            android:paddingTop="8dp"
+            android:text="哈弗"
+            android:textColor="@color/blackLight"
+            android:textSize="12sp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawablePadding="-8dp"
+            android:drawableTop="@drawable/ic_menu_order"
+            android:paddingTop="8dp"
+            android:text="日产"
+            android:textColor="@color/blackLight"
+            android:textSize="12sp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawablePadding="-8dp"
+            android:drawableTop="@drawable/ic_menu_order"
+            android:paddingTop="8dp"
+            android:text="起亚"
+            android:textColor="@color/blackLight"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

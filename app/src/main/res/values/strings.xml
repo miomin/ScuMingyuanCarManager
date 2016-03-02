@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">CarManager</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="drawer_home">首页</string>
+    <string name="drawer_mycar">我的车辆</string>
+    <string name="drawer_order">订单查询</string>
+    <string name="drawer_music">车载音频</string>
+    <string name="drawer_query">信息查询</string>
+    <string name="drawer_setting">设置</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="InputSourceAddressString">请输入起始地</string>
+    <string name="InputDestinationAddress">请输入目的地</string>
+
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="title_activity_register">RegisterActivity</string>
+
+    <string name="account">账号</string>
+    <string name="password">密码</string>
+    <string name="hint_account">账号/手机/邮箱</string>
+    <string name="hint_password">请输入密码</string>
+    <string name="forget_password">忘记密码</string>
+    <string name="set_account">请设置账号</string>
+    <string name="set_password">请设置密码</string>
+
+    <string name="user_protocol">阅读并接受《用户协议》</string>
+</resources>
