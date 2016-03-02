@@ -18,7 +18,7 @@ public class MyUser extends BmobUser {
         age = 0;
     }
 
-    public boolean getSex() {
+    public boolean isMale() {
         return this.sex;
     }
 

@@ -16,10 +16,10 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.listener.SaveListener;
 import scu.mingyuan.com.carmanager.R;
 import scu.mingyuan.com.carmanager.baseactivity.BaseActivity;
+import scu.mingyuan.com.carmanager.bean.MyUser;
 
 /**
  * Created by 莫绪旻 on 16/2/29.
@@ -184,10 +184,13 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     }
 
     private void login() {
-        BmobUser bu = new BmobUser();
-        bu.setUsername("lucky");
-        bu.setPassword("123456");
-        bu.login(this, new SaveListener() {
+        String username = account_edit.getText().toString();
+        String password = password_edit.getText().toString();
+
+        MyUser user = new MyUser(username);
+        user.setUsername(username);
+        user.setPassword(password);
+        user.login(this, new SaveListener() {
             @Override
             public void onSuccess() {
                 Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_LONG).show();

@@ -4,9 +4,6 @@ import android.annotation.SuppressLint;
 import android.app.Application;
 import android.content.Context;
 
-import com.bmob.BmobConfiguration;
-import com.bmob.BmobPro;
-
 import cn.bmob.v3.Bmob;
 
 /**
@@ -25,19 +22,8 @@ public class MyApplication extends Application {
 //        initImageLoader(this);
         // 初始化 Bmob SDK
         // 使用时请将第二个参数Application ID替换成你在Bmob服务器端创建的Application ID
-        Bmob.initialize(this, "22ad8b9d8b2f79cd7bde881a836ad2b7");
-        initConfig(getApplicationContext());
+        Bmob.initialize(this, "57ef776fe1958b4bf7175041a5005202");
         mInstance = this;
-    }
-
-    /**
-     * 初始化文件配置
-     *
-     * @param context
-     */
-    public static void initConfig(Context context) {
-        BmobConfiguration config = new BmobConfiguration.Builder(context).customExternalCacheDir("Smile").build();
-        BmobPro.getInstance(context).initConfig(config);
     }
 
     // 获取全局的context

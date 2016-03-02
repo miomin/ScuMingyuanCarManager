@@ -18,10 +18,10 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.listener.SaveListener;
 import scu.mingyuan.com.carmanager.R;
 import scu.mingyuan.com.carmanager.baseactivity.BaseActivity;
+import scu.mingyuan.com.carmanager.bean.MyUser;
 
 /**
  * Created by 莫绪旻 on 16/2/29.
@@ -164,14 +164,14 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
     private void register() {
         String username = account_edit.getText().toString();
         String password = password_edit.getText().toString();
-        BmobUser bu = new BmobUser();
-        bu.setUsername(username);
-        bu.setPassword(password);
-        bu.setEmail("691292118@qq.com");
-        bu.signUp(this, new SaveListener() {
+        MyUser user = new MyUser(username);
+        user.setUsername(username);
+        user.setPassword(password);
+        user.signUp(this, new SaveListener() {
             @Override
             public void onSuccess() {
                 Toast.makeText(RegisterActivity.this, "注册成功", Toast.LENGTH_LONG).show();
+                onBackPressed();
             }
 
             @Override

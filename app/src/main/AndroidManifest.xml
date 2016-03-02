@@ -64,6 +64,7 @@
                 android:value=".activity.LoginActivity" />
         </activity>
         <activity android:name=".activity.SelectCarActivity"></activity>
+
     </application>
 
 </manifest>
