@@ -3,7 +3,6 @@ package scu.mingyuan.com.carmanager.application;
 import android.annotation.SuppressLint;
 import android.app.Application;
 import android.content.Context;
-
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.cache.memory.impl.UsingFreqLimitedMemoryCache;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -11,6 +10,7 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.nostra13.universalimageloader.core.download.BaseImageDownloader;
+import com.baidu.mapapi.SDKInitializer;
 
 import cn.bmob.v3.Bmob;
 
@@ -31,6 +31,10 @@ public class MyApplication extends Application {
         // 初始化 Bmob SDK
         // 使用时请将第二个参数Application ID替换成你在Bmob服务器端创建的Application ID
         Bmob.initialize(this, "57ef776fe1958b4bf7175041a5005202");
+
+        //初始化BaiduMapSDK
+        SDKInitializer.initialize(this);
+
         mInstance = this;
     }
 
