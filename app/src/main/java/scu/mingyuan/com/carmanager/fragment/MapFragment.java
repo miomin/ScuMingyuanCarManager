@@ -36,9 +36,12 @@ public class MapFragment extends Fragment implements BDLocationListener {
     private EditText edit_inputDesAdd;
     private LinearLayout btn_swap;
 
+
     private MapView mapView;
     private BaiduMap baiduMap;
     boolean isFirstLoc = true;
+    private LocationClient LocationClient;
+    private static final String TAG = "YJK";
 
     public static MapFragment newInstance() {
         MapFragment fragment = new MapFragment();
@@ -61,6 +64,7 @@ public class MapFragment extends Fragment implements BDLocationListener {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getActivity().setTitle(R.string.app_name);
+
     }
 
     private void findView() {
@@ -86,34 +90,55 @@ public class MapFragment extends Fragment implements BDLocationListener {
         baiduMap.setMyLocationEnabled(true);
 
         // 定位初始化
-        LocationClient mLocClient = new LocationClient(getContext());
-        mLocClient.registerLocationListener(this);
+        LocationClient = new LocationClient(getContext());
+        LocationClient.registerLocationListener(this);
         LocationClientOption option = new LocationClientOption();
         option.setOpenGps(true); // 打开gps
         option.setNeedDeviceDirect(true);
         option.setCoorType("bd09ll"); // 设置坐标类型
         option.setScanSpan(1000);
-        mLocClient.setLocOption(option);
-        mLocClient.start();
+        LocationClient.setLocOption(option);
+        LocationClient.start();
 
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        Log.i(TAG, "onStop ");
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        Log.i(TAG, "onStart ");
     }
 
     @Override
     public void onPause() {
         super.onPause();
+        baiduMap.setMyLocationEnabled(false);
+        LocationClient.stop();
         mapView.onPause();
+        Log.i(TAG, "onPause ");
+
     }
 
     @Override
     public void onResume() {
         super.onResume();
+        baiduMap.setMyLocationEnabled(true);
+        LocationClient.start();
         mapView.onResume();
+        Log.i(TAG, "onResume ");
+
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
         mapView.onDestroy();
+        Log.i(TAG, "onDestroy");
     }
 
     @Override
