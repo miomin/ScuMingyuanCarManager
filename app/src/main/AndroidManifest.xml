@@ -43,22 +43,33 @@
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
+<<<<<<< HEAD
             android:process=":remote"></service>
+=======
+            android:process=":remote" >
+        </service>
+>>>>>>> 52a0cebe8af6a20f0a5151142e8c3b0a205e675f
 
         <activity
             android:name=".activity.HomeActivity"
             android:label="@string/app_name"
+<<<<<<< HEAD
             android:theme="@style/AppTheme.NoActionBar"></activity>
-
-        <activity
-            android:name=".activity.LoginActivity"
-            android:label="@string/title_activity_login"
-            android:theme="@style/AppTheme.NoActionBar">
+=======
+            android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+>>>>>>> 52a0cebe8af6a20f0a5151142e8c3b0a205e675f
+
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar">
+
         </activity>
 
         <activity

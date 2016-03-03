@@ -12,6 +12,8 @@ import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.nostra13.universalimageloader.core.download.BaseImageDownloader;
 import com.baidu.mapapi.SDKInitializer;
 
+import com.baidu.mapapi.SDKInitializer;
+
 import cn.bmob.v3.Bmob;
 
 /**

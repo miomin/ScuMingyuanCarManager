@@ -1,34 +1,21 @@
 apply plugin: 'com.android.application'
 
 android {
-    signingConfigs {
-        carmanagerkey {
-            keyAlias 'carmanagerkey'
-            keyPassword 'mingyuan'
-            storeFile file('/Users/miomin/Desktop/Askey/carmanagerkey.jks')
-            storePassword 'mingyuan'
-        }
-    }
     compileSdkVersion 23
     buildToolsVersion "23.0.1"
+
     defaultConfig {
         applicationId "scu.mingyuan.com.carmanager"
         minSdkVersion 14
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
-        signingConfig signingConfigs.carmanagerkey
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-        debug {
-            signingConfig signingConfigs.carmanagerkey
-        }
-    }
-    productFlavors {
     }
 }
 
