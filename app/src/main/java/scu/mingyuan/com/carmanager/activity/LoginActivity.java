@@ -1,6 +1,8 @@
 package scu.mingyuan.com.carmanager.activity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -43,6 +45,11 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 
     // 登录dialog
     private ProgressDialog logindialog;
+
+    public static void startActivity(Context context) {
+        Intent intent = new Intent(context, LoginActivity.class);
+        context.startActivity(intent);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
