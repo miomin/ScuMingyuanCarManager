@@ -4,6 +4,7 @@
     android:background="#fff4f7f9">
 
     <LinearLayout
+        android:id="@+id/layout_input"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginLeft="16dp"
@@ -11,7 +12,10 @@
         android:layout_marginTop="20dp"
         android:background="@color/whiteLight"
         android:elevation="3dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        >
 
         <LinearLayout
             android:layout_width="0dp"
@@ -30,7 +34,8 @@
                 android:gravity="center_vertical"
                 android:hint="@string/InputSourceAddressString"
                 android:padding="@dimen/activity_horizontal_margin"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:singleLine="true"/>
 
             <View
                 android:layout_width="match_parent"
@@ -48,7 +53,8 @@
                 android:gravity="center_vertical"
                 android:hint="@string/InputDestinationAddress"
                 android:padding="@dimen/activity_horizontal_margin"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:singleLine="true"/>
 
         </LinearLayout>
 
@@ -63,8 +69,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="?android:attr/selectableItemBackground"
-            android:gravity="center"
-            android:clickable="true">
+            android:clickable="true"
+            android:gravity="center">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -78,4 +84,71 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:clickable="true" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="152dp"
+        android:background="@color/whiteLight"
+        android:orientation="vertical"
+        android:elevation="3dp">
+
+        <ImageButton
+            android:id="@+id/btn_gasStation"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/ic_gas_station_n"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/whiteDivideLine"/>
+
+        <ImageButton
+            android:id="@+id/btn_park"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/ic_park_n" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/whiteDivideLine"/>
+
+
+        <ImageButton
+            android:id="@+id/btn_location"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/ic_location_n"/>
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_navigation"
+        android:layout_width="124dp"
+        android:layout_height="124dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_navigation"/>
+
+    <ListView
+        android:id="@+id/list_place"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="130dp"
+        android:background="@color/whiteLight"
+        android:elevation="3dp"
+        android:visibility="gone"
+        />
 </RelativeLayout>

@@ -14,7 +14,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import scu.mingyuan.com.carmanager.R;
 import scu.mingyuan.com.carmanager.baseactivity.BaseActivity;
@@ -33,6 +32,8 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
     private NavigationView nav_home;
     private View nav_header_layout;
     private ImageView ivUserHead;
+
+
 
     public static void startActivity(Context context) {
         Intent intent = new Intent(context, HomeActivity.class);
@@ -69,7 +70,6 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
         initView();
 
         MyUser currentUser = MyUser.getCurrentUser(this, MyUser.class);
-        Toast.makeText(this, "username:" + currentUser.getUsername() + "nick:" + currentUser.getNick(), Toast.LENGTH_LONG).show();
     }
 
     private void initView() {
