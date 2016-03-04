@@ -15,7 +15,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import scu.mingyuan.com.carmanager.R;
 import scu.mingyuan.com.carmanager.baseactivity.BaseActivity;
 import scu.mingyuan.com.carmanager.cache.UserCache;
@@ -35,6 +34,8 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
     private ImageView ivUserHead;
     private TextView tvUserName;
     private TextView tvEmail;
+
+
 
     public static void startActivity(Context context) {
         Intent intent = new Intent(context, HomeActivity.class);

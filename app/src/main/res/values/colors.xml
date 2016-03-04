@@ -17,6 +17,7 @@
     <color name="transparent">#00000000</color>
     <color name="blackPrimary">#000000</color>
     <color name="blackLight">#c8000000</color>
+    <color name="gray">#30000000</color>
 
     <color name="grey">#eaeaea</color>
 
