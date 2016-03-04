@@ -1,1 +1,1 @@
-include ':app', ':MaterialRefreshLib'
+include ':app', ':MaterialRefreshLib', ':zxinglib'
