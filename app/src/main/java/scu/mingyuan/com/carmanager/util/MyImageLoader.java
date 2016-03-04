@@ -29,6 +29,10 @@ public class MyImageLoader {
         return loader;
     }
 
+    public void displayFromNet(String imageUrl, ImageView imageView) {
+        loader.displayImage(imageUrl, imageView);
+    }
+
     public void displayFromDrawable(int imageId, ImageView imageView) {
         loader.displayImage("drawable://" + imageId,
                 imageView);

@@ -11,6 +11,7 @@ public class MyCar extends BmobObject {
     private Integer id;
     private String brand; //品牌
     private String car; //车系
+    private String model; //具体型号
     private String license_plate_number; // 车牌号
     private String engine_number; // 发动机号
     private Float mileage; // 里程数
@@ -21,24 +22,42 @@ public class MyCar extends BmobObject {
     private String car_location; //车辆所在地
     private BmobDate registration_date; //上牌日期
     private MyUser owner;//汽车拥有者
+    private String img;  //汽车图片url
+    private String price; //价格
+    private String displacement; // 排量
+    private String oil_consumption; //油耗
+    private String speed_changing_box; //变速箱
+    private String car_type; //车型
+    private String body_structure; // 车身级别(几门几座)
 
-    public MyCar(Boolean antomative_lighting_statu, String brand, String car,
-                 String car_location, String engine_number, Boolean engine_statu,
-                 Integer id, String license_plate_number, Float mileage, MyUser owner,
-                 BmobDate registration_date, Float remaining_oil, Boolean speed_changing_box_statu) {
-        super();
+    public MyCar(Boolean antomative_lighting_statu, String body_structure,
+                 String brand, String car, String car_location,
+                 String car_type, String displacement, String engine_number,
+                 Boolean engine_statu, Integer id, String img,
+                 String license_plate_number, Float mileage, String model,
+                 String oil_consumption, MyUser owner, String price,
+                 BmobDate registration_date, Float remaining_oil,
+                 String speed_changing_box, Boolean speed_changing_box_statu) {
         this.antomative_lighting_statu = antomative_lighting_statu;
+        this.body_structure = body_structure;
         this.brand = brand;
         this.car = car;
         this.car_location = car_location;
+        this.car_type = car_type;
+        this.displacement = displacement;
         this.engine_number = engine_number;
         this.engine_statu = engine_statu;
         this.id = id;
+        this.img = img;
         this.license_plate_number = license_plate_number;
         this.mileage = mileage;
+        this.model = model;
+        this.oil_consumption = oil_consumption;
         this.owner = owner;
+        this.price = price;
         this.registration_date = registration_date;
         this.remaining_oil = remaining_oil;
+        this.speed_changing_box = speed_changing_box;
         this.speed_changing_box_statu = speed_changing_box_statu;
     }
 
@@ -48,6 +67,14 @@ public class MyCar extends BmobObject {
 
     public void setAntomative_lighting_statu(Boolean antomative_lighting_statu) {
         this.antomative_lighting_statu = antomative_lighting_statu;
+    }
+
+    public String getBody_structure() {
+        return body_structure;
+    }
+
+    public void setBody_structure(String body_structure) {
+        this.body_structure = body_structure;
     }
 
     public String getBrand() {
@@ -74,6 +101,22 @@ public class MyCar extends BmobObject {
         this.car_location = car_location;
     }
 
+    public String getCar_type() {
+        return car_type;
+    }
+
+    public void setCar_type(String car_type) {
+        this.car_type = car_type;
+    }
+
+    public String getDisplacement() {
+        return displacement;
+    }
+
+    public void setDisplacement(String displacement) {
+        this.displacement = displacement;
+    }
+
     public String getEngine_number() {
         return engine_number;
     }
@@ -98,6 +141,14 @@ public class MyCar extends BmobObject {
         this.id = id;
     }
 
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+
     public String getLicense_plate_number() {
         return license_plate_number;
     }
@@ -114,12 +165,36 @@ public class MyCar extends BmobObject {
         this.mileage = mileage;
     }
 
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public String getOil_consumption() {
+        return oil_consumption;
+    }
+
+    public void setOil_consumption(String oil_consumption) {
+        this.oil_consumption = oil_consumption;
+    }
+
     public MyUser getOwner() {
         return owner;
     }
 
     public void setOwner(MyUser owner) {
         this.owner = owner;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
     }
 
     public BmobDate getRegistration_date() {
@@ -136,6 +211,14 @@ public class MyCar extends BmobObject {
 
     public void setRemaining_oil(Float remaining_oil) {
         this.remaining_oil = remaining_oil;
+    }
+
+    public String getSpeed_changing_box() {
+        return speed_changing_box;
+    }
+
+    public void setSpeed_changing_box(String speed_changing_box) {
+        this.speed_changing_box = speed_changing_box;
     }
 
     public Boolean getSpeed_changing_box_statu() {

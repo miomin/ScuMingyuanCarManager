@@ -84,11 +84,13 @@ public class MyCarAdapter extends BaseAdapter implements AbsListView.OnScrollLis
                 case TYPE_2:
                     convertView = View.inflate(context, R.layout.item_mycar, null);
                     holder2 = new ViewHolder2();
+                    holder2.tvType = (TextView) convertView.findViewById(R.id.tvType);
                     holder2.icon_car = (ImageView) convertView.findViewById(R.id.icon_car);
                     holder2.tvBrand = (TextView) convertView.findViewById(R.id.tvBrand);
-                    holder2.tvModel = (TextView) convertView.findViewById(R.id.tvModel);
+                    holder2.tvCar = (TextView) convertView.findViewById(R.id.tvCar);
                     holder2.tvCarLocation = (TextView) convertView.findViewById(R.id.tvCarLocation);
                     holder2.tvlicensePlateNumber = (TextView) convertView.findViewById(R.id.tvlicensePlateNumber);
+                    holder2.tvModel = (TextView) convertView.findViewById(R.id.tvModel);
                     holder2.tvBodyStructure = (TextView) convertView.findViewById(R.id.tvBodyStructure);
                     convertView.setTag(holder2);
                     break;
@@ -112,12 +114,14 @@ public class MyCarAdapter extends BaseAdapter implements AbsListView.OnScrollLis
                 break;
             case TYPE_2:
                 MyCar myCar = mycarList.get(position - 1);
-                MyImageLoader.getInstance().dispalyFromAssets("car1.png", holder2.icon_car);
+                holder2.tvType.setText(myCar.getCar_type());
+                MyImageLoader.getInstance().displayFromNet(myCar.getImg(), holder2.icon_car);
                 holder2.tvBrand.setText(myCar.getBrand());
-                holder2.tvModel.setText(myCar.getCar());
+                holder2.tvCar.setText(myCar.getCar());
                 holder2.tvCarLocation.setText(myCar.getCar_location());
                 holder2.tvlicensePlateNumber.setText(myCar.getLicense_plate_number());
-                holder2.tvBodyStructure.setText(myCar.getCar());
+                holder2.tvModel.setText(myCar.getModel());
+                holder2.tvBodyStructure.setText(myCar.getBody_structure());
                 break;
         }
         return convertView;
@@ -150,11 +154,13 @@ public class MyCarAdapter extends BaseAdapter implements AbsListView.OnScrollLis
     }
 
     class ViewHolder2 {
+        public TextView tvType;
         public ImageView icon_car;
         public TextView tvBrand;
-        public TextView tvModel;
+        public TextView tvCar;
         public TextView tvCarLocation;
         public TextView tvlicensePlateNumber;
+        public TextView tvModel;
         public TextView tvBodyStructure;
     }
 

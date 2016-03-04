@@ -117,4 +117,10 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="8dp"
+        android:background="@color/whiteDivideLine" />
+
 </LinearLayout>

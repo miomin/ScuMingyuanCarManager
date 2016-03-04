@@ -51,4 +51,5 @@ dependencies {
     compile files('libs/okio-1.4.0.jar')
     compile files('libs/universal-image-loader-1.9.4.jar')
     compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    compile project(':MaterialRefreshLib')
 }

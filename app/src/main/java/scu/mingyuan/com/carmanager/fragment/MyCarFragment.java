@@ -6,6 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.Toast;
+
+import com.cjj.MaterialRefreshLayout;
+import com.cjj.MaterialRefreshListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +26,9 @@ import scu.mingyuan.com.carmanager.bean.MyUser;
  * Created by 莫绪旻 on 16/2/29.
  */
 public class MyCarFragment extends Fragment {
+
+    // 下拉刷新的布局
+    private MaterialRefreshLayout materialRefreshLayout;
 
     // fragment的布局
     private View fragmentView;
@@ -74,5 +81,41 @@ public class MyCarFragment extends Fragment {
 
             }
         });
+
+        materialRefreshLayout = (MaterialRefreshLayout) fragmentView.findViewById(R.id.refresh_layout);
+        materialRefreshLayout.setLoadMore(true);
+        materialRefreshLayout.finishRefreshLoadMore();
+        materialRefreshLayout.setMaterialRefreshListener(new MaterialRefreshListener() {
+            @Override
+            public void onRefresh(final MaterialRefreshLayout materialRefreshLayout) {
+                materialRefreshLayout.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        materialRefreshLayout.finishRefresh();
+
+                    }
+                }, 3000);
+            }
+
+            @Override
+            public void onfinish() {
+                Toast.makeText(getActivity(), "finish", Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onRefreshLoadMore(final MaterialRefreshLayout materialRefreshLayout) {
+                Toast.makeText(getActivity(), "load more", Toast.LENGTH_LONG).show();
+
+                materialRefreshLayout.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        materialRefreshLayout.finishRefreshLoadMore();
+
+                    }
+                }, 3000);
+            }
+        });
+
+        materialRefreshLayout.autoRefresh();
     }
 }

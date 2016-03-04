@@ -9,21 +9,23 @@
     android:paddingRight="16dp"
     android:paddingTop="10dp">
 
-    <scu.mingyuan.com.carmanager.myview.XCRoundImageView
+    <ImageView
         android:id="@+id/icon_car"
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:layout_centerVertical="true"
-        android:layout_marginRight="5dp" />
+        android:layout_marginRight="5dp"
+        android:scaleType="fitXY" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/tvType"
+        android:layout_width="32dp"
+        android:layout_height="14dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/bg_blue_solid"
+        android:gravity="center"
         android:padding="2dp"
-        android:text="@string/common_use_car"
         android:textColor="@color/whiteLight"
         android:textSize="8sp" />
 
@@ -50,7 +52,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/tvModel"
+                android:id="@+id/tvCar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -93,6 +95,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tvModel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
