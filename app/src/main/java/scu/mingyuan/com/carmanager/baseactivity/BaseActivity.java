@@ -6,8 +6,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.GestureDetector;
-import android.view.MotionEvent;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -20,18 +18,11 @@ import scu.mingyuan.com.carmanager.util.SystemBarTintManager;
  */
 public class BaseActivity extends AppCompatActivity {
 
-    // 右滑关闭的监听器
-    final int RIGHT = 0;
-    final int LEFT = 1;
-    private GestureDetector gestureDetector;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.i("carmanager", getClass().getSimpleName());
         ActivityCollector.addActivity(this);
-        // 注册右滑关闭的监听器
-        gestureDetector = new GestureDetector(this, onGestureListener);
         initSystemBar(this);
     }
 
@@ -74,41 +65,5 @@ public class BaseActivity extends AppCompatActivity {
         }
 
         win.setAttributes(winParams);
-    }
-
-    // 注册右滑关闭的监听器
-    private GestureDetector.OnGestureListener onGestureListener =
-            new GestureDetector.SimpleOnGestureListener() {
-                @Override
-                public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
-                                       float velocityY) {
-                    float x = e2.getX() - e1.getX();
-                    float y = e2.getY() - e1.getY();
-
-                    if (x > 0) {
-                        doResult(RIGHT);
-                    } else if (x < 0) {
-                        doResult(LEFT);
-                    }
-                    return true;
-                }
-            };
-
-    public boolean onTouchEvent(MotionEvent event) {
-        return gestureDetector.onTouchEvent(event);
-    }
-
-    public void doResult(int action) {
-
-        switch (action) {
-            case RIGHT:
-                onBackPressed();
-                break;
-
-            case LEFT:
-
-                break;
-
-        }
     }
 }

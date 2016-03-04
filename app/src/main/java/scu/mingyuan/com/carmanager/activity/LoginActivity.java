@@ -17,10 +17,15 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import java.util.List;
+
+import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.listener.FindListener;
 import cn.bmob.v3.listener.SaveListener;
 import scu.mingyuan.com.carmanager.R;
 import scu.mingyuan.com.carmanager.baseactivity.BaseActivity;
 import scu.mingyuan.com.carmanager.bean.MyUser;
+import scu.mingyuan.com.carmanager.cache.UserCache;
 
 /**
  * Created by 莫绪旻 on 16/2/29.
@@ -193,18 +198,48 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         logindialog.setMessage("登录中，请稍后");
         logindialog.show();
 
-        String username = account_edit.getText().toString();
+        final String username = account_edit.getText().toString();
         String password = password_edit.getText().toString();
 
-        MyUser user = new MyUser(username);
-        user.setUsername(username);
-        user.setPassword(password);
-        user.login(this, new SaveListener() {
+        final MyUser currentUser = new MyUser(username);
+        currentUser.setUsername(username);
+        currentUser.setPassword(password);
+        currentUser.login(this, new SaveListener() {
             @Override
             public void onSuccess() {
-                Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_LONG).show();
-                HomeActivity.startActivity(LoginActivity.this);
-                logindialog.dismiss();
+
+                // 获取登录成功的用户信息
+                BmobQuery<MyUser> query = new BmobQuery<MyUser>();
+                //查询username对应的数据
+                query.addWhereEqualTo("username", username);
+                //返回50条数据，如果不加上这条语句，默认返回10条数据
+                query.setLimit(1);
+                //执行查询方法
+                query.findObjects(LoginActivity.this, new FindListener<MyUser>() {
+                    @Override
+                    public void onSuccess(List<MyUser> object) {
+                        currentUser.setEmail(object.get(0).getEmail());
+                        currentUser.setAge(object.get(0).getAge());
+                        currentUser.setNick(object.get(0).getNick());
+                        currentUser.setSex(object.get(0).isMale());
+                        currentUser.setEmailVerified(object.get(0).getEmailVerified());
+                        currentUser.setMobilePhoneNumber(object.get(0).getMobilePhoneNumber());
+                        currentUser.setMobilePhoneNumberVerified(object.get(0).getMobilePhoneNumberVerified());
+                        currentUser.setObjectId(object.get(0).getObjectId());
+
+                        UserCache.getUserCache(LoginActivity.this).setCurrentUser(currentUser);
+
+                        Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_LONG).show();
+                        HomeActivity.startActivity(LoginActivity.this);
+                        logindialog.dismiss();
+                    }
+
+                    @Override
+                    public void onError(int code, String msg) {
+                        Toast.makeText(LoginActivity.this, "登录失败：" + code + "," + msg, Toast.LENGTH_LONG).show();
+                        logindialog.dismiss();
+                    }
+                });
             }
 
             @Override
@@ -214,5 +249,4 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             }
         });
     }
-
 }

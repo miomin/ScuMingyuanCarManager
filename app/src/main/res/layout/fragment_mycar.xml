@@ -3,6 +3,22 @@
     android:layout_height="match_parent"
     android:background="#fff4f7f9">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
+        <ListView
+            android:id="@+id/lvMycar"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#fff4f7f9"
+            android:cacheColorHint="#00000000"
+            android:divider="#dddbdb"
+            android:dividerHeight="1.0px"
+            android:drawSelectorOnTop="false"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="none" />
+    </LinearLayout>
 
 </RelativeLayout>

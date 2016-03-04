@@ -63,8 +63,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="?android:attr/selectableItemBackground"
-            android:gravity="center"
-            android:clickable="true">
+            android:clickable="true"
+            android:gravity="center">
 
             <ImageView
                 android:layout_width="wrap_content"

@@ -26,5 +26,13 @@
     <string name="set_account">请设置账号</string>
     <string name="set_password">请设置密码</string>
 
+    <string name="common_use_car">常用汽车</string>
+
     <string name="user_protocol">阅读并接受《用户协议》</string>
+
+    <string name="accessories_query">配件查询</string>
+    <string name="accessories_query_des">查询汽车适用或者可升级配件</string>
+
+    <string name="add_car">添加汽车</string>
+    <string name="acc_car_des">添加你还有的其他汽车</string>
 </resources>

@@ -14,11 +14,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
+import android.widget.TextView;
 
 import scu.mingyuan.com.carmanager.R;
 import scu.mingyuan.com.carmanager.baseactivity.BaseActivity;
-import scu.mingyuan.com.carmanager.bean.MyUser;
+import scu.mingyuan.com.carmanager.cache.UserCache;
 import scu.mingyuan.com.carmanager.fragment.MapFragment;
 import scu.mingyuan.com.carmanager.fragment.MusicFragment;
 import scu.mingyuan.com.carmanager.fragment.MyCarFragment;
@@ -33,6 +33,8 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
     private NavigationView nav_home;
     private View nav_header_layout;
     private ImageView ivUserHead;
+    private TextView tvUserName;
+    private TextView tvEmail;
 
     public static void startActivity(Context context) {
         Intent intent = new Intent(context, HomeActivity.class);
@@ -67,17 +69,18 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
         fragmentTransaction.commit();
 
         initView();
-
-        MyUser currentUser = MyUser.getCurrentUser(this, MyUser.class);
-        Toast.makeText(this, "username:" + currentUser.getUsername() + "nick:" + currentUser.getNick(), Toast.LENGTH_LONG).show();
     }
 
     private void initView() {
         nav_home = (NavigationView) findViewById(R.id.nav_home);
         nav_header_layout = nav_home.getHeaderView(0);
-        // 加载头像
+        // 加载用户资料
         ivUserHead = (ImageView) nav_header_layout.findViewById(R.id.ivUserHead);
+        tvUserName = (TextView) nav_header_layout.findViewById(R.id.tvUserName);
+        tvEmail = (TextView) nav_header_layout.findViewById(R.id.tvEmail);
         MyImageLoader.getInstance().dispalyFromAssets("13558868295.png", ivUserHead);
+        tvUserName.setText(UserCache.getUserCache(this).getCurrentUser().getNick());
+        tvEmail.setText(UserCache.getUserCache(this).getCurrentUser().getEmail());
     }
 
 

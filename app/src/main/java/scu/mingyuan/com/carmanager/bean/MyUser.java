@@ -41,4 +41,13 @@ public class MyUser extends BmobUser {
     public void setAge(Integer age) {
         this.age = age;
     }
+
+    @Override
+    public String toString() {
+        return "MyUser{" +
+                "age=" + age +
+                ", sex=" + sex +
+                ", nick='" + nick + '\'' +
+                '}' + super.toString();
+    }
 }

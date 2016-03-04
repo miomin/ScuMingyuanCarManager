@@ -18,5 +18,7 @@
     <color name="blackPrimary">#000000</color>
     <color name="blackLight">#c8000000</color>
 
+    <color name="grey">#eaeaea</color>
+
 
 </resources>

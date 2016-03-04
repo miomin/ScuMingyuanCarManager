@@ -15,7 +15,5 @@ public class SelectCarActivity extends BaseActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_car);
-
-
     }
 }

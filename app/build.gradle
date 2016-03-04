@@ -1,21 +1,35 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        carmanagerkey {
+            keyAlias 'carmanagerkey'
+            keyPassword 'mingyuan'
+            storeFile file('/Users/miomin/Desktop/Askey/carmanagerkey.jks')
+            storePassword 'mingyuan'
+        }
+    }
     compileSdkVersion 23
     buildToolsVersion "23.0.1"
-
     defaultConfig {
         applicationId "scu.mingyuan.com.carmanager"
         minSdkVersion 14
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+        signingConfig signingConfigs.carmanagerkey
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.carmanagerkey
         }
+        debug {
+            signingConfig signingConfigs.carmanagerkey
+        }
+    }
+    productFlavors {
     }
 }
 
@@ -36,4 +50,5 @@ dependencies {
     compile files('libs/okhttp-2.4.0.jar')
     compile files('libs/okio-1.4.0.jar')
     compile files('libs/universal-image-loader-1.9.4.jar')
+    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
 }
