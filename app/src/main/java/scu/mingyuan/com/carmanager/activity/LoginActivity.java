@@ -46,6 +46,11 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     // 登录dialog
     private ProgressDialog logindialog;
 
+    // 保存账号密码的共用首选项
+    public static final String LOGININFO = "logininfo";
+    public static final String ACCOUNT = "account";
+    public static final String PASSWORD = "password";
+
     public static void startActivity(Context context) {
         Intent intent = new Intent(context, LoginActivity.class);
         context.startActivity(intent);
@@ -70,19 +75,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         });
 
         initView();
-        initData();
-    }
-
-    private void initData() {
-        SharedPreferences sp = getSharedPreferences("logininfo", MODE_PRIVATE);
-
-        if (sp != null) {
-            // 从本地读取上次登录成功时保存的用户登录信息
-            String phonenumber = sp.getString("phonenumber", null);
-            if (phonenumber != null) {
-                account_edit.setText(phonenumber);
-            }
-        }
     }
 
     private void initView() {
@@ -206,7 +198,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         logindialog.show();
 
         final String username = account_edit.getText().toString();
-        String password = password_edit.getText().toString();
+        final String password = password_edit.getText().toString();
 
         final MyUser currentUser = new MyUser(username);
         currentUser.setUsername(username);
@@ -235,16 +227,21 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                         currentUser.setObjectId(object.get(0).getObjectId());
 
                         UserCache.getUserCache(LoginActivity.this).setCurrentUser(currentUser);
+                        // 保存登录信息到SharedPerences
+                        saveLoginInfo(username, password);
 
                         Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_LONG).show();
                         HomeActivity.startActivity(LoginActivity.this);
-                        logindialog.dismiss();
+
+                        if (logindialog != null)
+                            logindialog.dismiss();
                     }
 
                     @Override
                     public void onError(int code, String msg) {
                         Toast.makeText(LoginActivity.this, "登录失败：" + code + "," + msg, Toast.LENGTH_LONG).show();
-                        logindialog.dismiss();
+                        if (logindialog != null)
+                            logindialog.dismiss();
                     }
                 });
             }
@@ -255,5 +252,13 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                 logindialog.dismiss();
             }
         });
+    }
+
+    // 保存登录信息到SharedPerences
+    public void saveLoginInfo(String username, String password) {
+        SharedPreferences.Editor editor = getSharedPreferences(LOGININFO, MODE_PRIVATE).edit();
+        editor.putString(ACCOUNT, username);
+        editor.putString(PASSWORD, password);
+        editor.commit();
     }
 }

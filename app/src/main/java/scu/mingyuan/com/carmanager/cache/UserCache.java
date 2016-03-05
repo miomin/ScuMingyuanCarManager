@@ -5,7 +5,7 @@ import android.content.Context;
 import scu.mingyuan.com.carmanager.bean.MyUser;
 
 /**
- * Created by miomin on 16/3/2.
+ * Created by 莫绪旻 on 16/3/2.
  */
 public class UserCache {
 

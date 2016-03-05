@@ -14,7 +14,7 @@ import java.util.List;
 import scu.mingyuan.com.carmanager.R;
 
 /**
- * Created by 847912006 on 2016/3/4.
+ * Created by 应俊康 on 2016/3/4.
  */
 public class PlaceAdapter extends BaseAdapter {
 

@@ -3,7 +3,7 @@ package scu.mingyuan.com.carmanager.bean;
 import cn.bmob.v3.BmobUser;
 
 /**
- * Created by miomin on 16/3/1.
+ * Created by 莫绪旻 on 16/3/1.
  */
 public class MyUser extends BmobUser {
 
