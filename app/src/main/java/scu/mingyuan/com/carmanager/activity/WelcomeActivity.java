@@ -105,13 +105,13 @@ public class WelcomeActivity extends BaseActivity {
                         currentUser.setMobilePhoneNumberVerified(object.get(0).getMobilePhoneNumberVerified());
                         currentUser.setObjectId(object.get(0).getObjectId());
 
-                        UserCache.getUserCache(WelcomeActivity.this).setCurrentUser(currentUser);
+                        UserCache.getUserCache().setCurrentUser(currentUser);
                         mHandler.sendEmptyMessageDelayed(GO_HOME, TIME);
                     }
 
                     @Override
                     public void onError(int code, String msg) {
-                        Toast.makeText(WelcomeActivity.this, "登录失败：" + code + "," + msg, Toast.LENGTH_LONG).show();
+                        Toast.makeText(WelcomeActivity.this, getResources().getString(R.string.login_failed) + "：" + code + "," + msg, Toast.LENGTH_LONG).show();
                         mHandler.sendEmptyMessageDelayed(GO_LOGIN, TIME);
                     }
                 });
@@ -119,7 +119,7 @@ public class WelcomeActivity extends BaseActivity {
 
             @Override
             public void onFailure(int code, String msg) {
-                Toast.makeText(WelcomeActivity.this, "登录失败：" + code + "," + msg, Toast.LENGTH_LONG).show();
+                Toast.makeText(WelcomeActivity.this, getResources().getString(R.string.login_failed) + "：" + code + "," + msg, Toast.LENGTH_LONG).show();
                 mHandler.sendEmptyMessageDelayed(GO_LOGIN, TIME);
             }
         });

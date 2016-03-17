@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -18,9 +19,11 @@ import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.listener.FindListener;
 import scu.mingyuan.com.carmanager.R;
+import scu.mingyuan.com.carmanager.activity.MyCarDetailActivity;
 import scu.mingyuan.com.carmanager.adapter.MyCarAdapter;
 import scu.mingyuan.com.carmanager.bean.MyCar;
 import scu.mingyuan.com.carmanager.bean.MyUser;
+import scu.mingyuan.com.carmanager.cache.MyCarCache;
 
 /**
  * Created by 莫绪旻 on 16/2/29.
@@ -58,8 +61,8 @@ public class MyCarFragment extends Fragment {
 
     private void initView() {
         lvMycar = (ListView) fragmentView.findViewById(R.id.lvMycar);
-
-        final ArrayList<MyCar> myCars = new ArrayList<>();
+        myCarAdapter = new MyCarAdapter(new ArrayList<MyCar>(), getActivity());
+        lvMycar.setAdapter(myCarAdapter);
 
         MyUser currentUser = BmobUser.getCurrentUser(getActivity(), MyUser.class);
         BmobQuery<MyCar> query = new BmobQuery<MyCar>();
@@ -70,10 +73,9 @@ public class MyCarFragment extends Fragment {
             @Override
             public void onSuccess(List<MyCar> object) {
                 for (int i = 0; i < object.size(); i++) {
-                    myCars.add(object.get(i));
+                    MyCarCache.getMyCarCache().add(object.get(i));
+                    myCarAdapter.add(object.get(i));
                 }
-                myCarAdapter = new MyCarAdapter(myCars, getActivity());
-                lvMycar.setAdapter(myCarAdapter);
             }
 
             @Override
@@ -92,7 +94,7 @@ public class MyCarFragment extends Fragment {
                     @Override
                     public void run() {
                         materialRefreshLayout.finishRefresh();
-                        
+
                     }
                 }, 3000);
             }
@@ -117,5 +119,13 @@ public class MyCarFragment extends Fragment {
         });
 
         materialRefreshLayout.autoRefresh();
+
+
+        lvMycar.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                MyCarDetailActivity.startActivity(getActivity());
+            }
+        });
     }
 }

@@ -80,8 +80,8 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
         tvUserName = (TextView) nav_header_layout.findViewById(R.id.tvUserName);
         tvEmail = (TextView) nav_header_layout.findViewById(R.id.tvEmail);
         MyImageLoader.getInstance().dispalyFromAssets("13558868295.png", ivUserHead);
-        tvUserName.setText(UserCache.getUserCache(this).getCurrentUser().getNick());
-        tvEmail.setText(UserCache.getUserCache(this).getCurrentUser().getEmail());
+        tvUserName.setText(UserCache.getUserCache().getCurrentUser().getNick());
+        tvEmail.setText(UserCache.getUserCache().getCurrentUser().getEmail());
     }
 
 

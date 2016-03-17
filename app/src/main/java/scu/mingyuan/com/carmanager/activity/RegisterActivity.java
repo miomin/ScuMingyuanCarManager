@@ -170,13 +170,13 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
         user.signUp(this, new SaveListener() {
             @Override
             public void onSuccess() {
-                Toast.makeText(RegisterActivity.this, "注册成功", Toast.LENGTH_LONG).show();
+                Toast.makeText(RegisterActivity.this, getResources().getString(R.string.register_succeed), Toast.LENGTH_LONG).show();
                 onBackPressed();
             }
 
             @Override
             public void onFailure(int code, String msg) {
-                Toast.makeText(RegisterActivity.this, "注册失败：" + code + "," + msg, Toast.LENGTH_LONG).show();
+                Toast.makeText(RegisterActivity.this, getResources().getString(R.string.register_failed) + ":" + code + "," + msg, Toast.LENGTH_LONG).show();
             }
         });
     }
