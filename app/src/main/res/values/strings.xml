@@ -15,7 +15,12 @@
     <string name="InputDestinationAddress">请输入目的地</string>
 
     <string name="login">登录</string>
+    <string name="logining">登录中，请稍后</string>
+    <string name="login_succeed">登录成功</string>
+    <string name="login_failed">登录失败</string>
     <string name="register">注册</string>
+    <string name="register_succeed">注册成功</string>
+
     <string name="title_activity_register">RegisterActivity</string>
 
     <string name="account">账号</string>

@@ -194,7 +194,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     private void login() {
 
         logindialog = new ProgressDialog(LoginActivity.this);
-        logindialog.setMessage("登录中，请稍后");
+        logindialog.setMessage(getResources().getString(R.string.logining));
         logindialog.show();
 
         final String username = account_edit.getText().toString();
@@ -230,7 +230,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                         // 保存登录信息到SharedPerences
                         saveLoginInfo(username, password);
 
-                        Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_LONG).show();
+                        Toast.makeText(LoginActivity.this, getResources().getString(R.string.login_succeed), Toast.LENGTH_LONG).show();
                         HomeActivity.startActivity(LoginActivity.this);
 
                         if (logindialog != null)
@@ -239,7 +239,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 
                     @Override
                     public void onError(int code, String msg) {
-                        Toast.makeText(LoginActivity.this, "登录失败：" + code + "," + msg, Toast.LENGTH_LONG).show();
+                        Toast.makeText(LoginActivity.this, getResources().getString(R.string.login_failed) + ":" + code + "," + msg, Toast.LENGTH_LONG).show();
                         if (logindialog != null)
                             logindialog.dismiss();
                     }
@@ -248,7 +248,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 
             @Override
             public void onFailure(int code, String msg) {
-                Toast.makeText(LoginActivity.this, "登录失败：" + code + "," + msg, Toast.LENGTH_LONG).show();
+                Toast.makeText(LoginActivity.this, getResources().getString(R.string.login_failed) + ":" + code + "," + msg, Toast.LENGTH_LONG).show();
                 logindialog.dismiss();
             }
         });

@@ -18,7 +18,7 @@ public class UserCache {
         this.mAppContext = appContext;
     }
 
-    public static UserCache getUserCache(Context context) {
+    public synchronized static UserCache getUserCache(Context context) {
         if (mUserCache == null) {
             mUserCache = new UserCache(context.getApplicationContext());
         }

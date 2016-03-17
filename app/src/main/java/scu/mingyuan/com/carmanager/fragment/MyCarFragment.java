@@ -92,7 +92,7 @@ public class MyCarFragment extends Fragment {
                     @Override
                     public void run() {
                         materialRefreshLayout.finishRefresh();
-
+                        
                     }
                 }, 3000);
             }
