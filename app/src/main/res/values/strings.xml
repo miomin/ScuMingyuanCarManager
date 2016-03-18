@@ -22,6 +22,8 @@
     <string name="register_succeed">注册成功</string>
     <string name="register_failed">注册失败</string>
 
+    <string name="data_load_failed">数据加载失败</string>
+
     <string name="title_activity_register">RegisterActivity</string>
 
     <string name="account">账号</string>

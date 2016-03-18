@@ -31,7 +31,6 @@
             android:layout_weight="1"
             android:background="@drawable/white_bg_ripple"
             android:clickable="true"
-            android:elevation="3dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -81,7 +80,6 @@
             android:layout_weight="1"
             android:background="@drawable/white_bg_ripple"
             android:clickable="true"
-            android:elevation="3dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 

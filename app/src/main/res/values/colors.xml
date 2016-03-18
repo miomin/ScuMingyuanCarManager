@@ -19,6 +19,7 @@
     <color name="blackPrimary">#000000</color>
     <color name="blackLight">#c8000000</color>
     <color name="gray">#30000000</color>
+    <color name="grayLight">#a6a3a3</color>
 
     <color name="grey">#eaeaea</color>
 

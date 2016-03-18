@@ -75,6 +75,7 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
     private void initView() {
         nav_home = (NavigationView) findViewById(R.id.nav_home);
         nav_header_layout = nav_home.getHeaderView(0);
+
         // 加载用户资料
         ivUserHead = (ImageView) nav_header_layout.findViewById(R.id.ivUserHead);
         tvUserName = (TextView) nav_header_layout.findViewById(R.id.tvUserName);
