@@ -75,11 +75,11 @@
             android:gravity="center_vertical" />
 
         <LinearLayout
+            android:id="@+id/layout_add_mycar"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:background="@drawable/white_bg_ripple"
-            android:clickable="true"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 

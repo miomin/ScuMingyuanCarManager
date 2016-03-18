@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ import scu.mingyuan.com.carmanager.R;
 import scu.mingyuan.com.carmanager.bean.MyCar;
 import scu.mingyuan.com.carmanager.myview.MyBanner;
 import scu.mingyuan.com.carmanager.util.MyImageLoader;
+import scu.mingyuan.com.carmanager.zxing.ericssonlabs.BarCodeTestActivity;
 
 /**
  * Created by 莫绪旻 on 16/3/3.
@@ -89,6 +91,13 @@ public class MyCarAdapter extends BaseAdapter implements AbsListView.OnScrollLis
                     convertView = View.inflate(context, R.layout.layout_mycar_top, null);
                     holder1 = new ViewHolder1();
                     holder1.myBanner = (MyBanner) convertView.findViewById(R.id.myBanner);
+                    holder1.layout_add_mycar = (LinearLayout) convertView.findViewById(R.id.layout_add_mycar);
+                    holder1.layout_add_mycar.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            BarCodeTestActivity.startActivity(context);
+                        }
+                    });
                     convertView.setTag(holder1);
                     break;
                 case TYPE_2:
@@ -161,6 +170,7 @@ public class MyCarAdapter extends BaseAdapter implements AbsListView.OnScrollLis
 
     class ViewHolder1 {
         public MyBanner myBanner;
+        public LinearLayout layout_add_mycar;
     }
 
     class ViewHolder2 {
