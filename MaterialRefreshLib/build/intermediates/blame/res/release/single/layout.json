@@ -12,12 +12,12 @@
         "source": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_activity_chooser_view.xml"
     },
     {
-        "merged": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/MaterialRefreshLib/build/intermediates/res/merged/release/layout/notification_template_media.xml",
-        "source": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/MaterialRefreshLib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_media.xml"
-    },
-    {
         "merged": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/library/build/intermediates/res/merged/release/layout/notification_template_big_media_narrow.xml",
         "source": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/MaterialRefreshLib/build/intermediates/res/merged/release/layout/notification_template_media.xml",
+        "source": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/MaterialRefreshLib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_media.xml"
     },
     {
         "merged": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/library/build/intermediates/res/merged/release/layout/notification_template_lines.xml",

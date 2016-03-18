@@ -1,7 +1,5 @@
 package scu.mingyuan.com.carmanager.cache;
 
-import android.content.Context;
-
 import scu.mingyuan.com.carmanager.bean.MyUser;
 
 /**
@@ -12,15 +10,14 @@ public class UserCache {
     private MyUser currentUser;
 
     private static UserCache mUserCache;
-    private Context mAppContext;
 
-    private UserCache(Context appContext) {
-        this.mAppContext = appContext;
+    private UserCache() {
+
     }
 
-    public synchronized static UserCache getUserCache(Context context) {
+    synchronized public static UserCache getUserCache() {
         if (mUserCache == null) {
-            mUserCache = new UserCache(context.getApplicationContext());
+            mUserCache = new UserCache();
         }
         return mUserCache;
     }

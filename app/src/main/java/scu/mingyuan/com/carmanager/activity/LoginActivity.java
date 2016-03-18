@@ -226,7 +226,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                         currentUser.setMobilePhoneNumberVerified(object.get(0).getMobilePhoneNumberVerified());
                         currentUser.setObjectId(object.get(0).getObjectId());
 
-                        UserCache.getUserCache(LoginActivity.this).setCurrentUser(currentUser);
+                        UserCache.getUserCache().setCurrentUser(currentUser);
                         // 保存登录信息到SharedPerences
                         saveLoginInfo(username, password);
 

@@ -30,37 +30,6 @@ public class MyCar extends BmobObject {
     private String car_type; //车型
     private String body_structure; // 车身级别(几门几座)
 
-    public MyCar(Boolean antomative_lighting_statu, String body_structure,
-                 String brand, String car, String car_location,
-                 String car_type, String displacement, String engine_number,
-                 Boolean engine_statu, Integer id, String img,
-                 String license_plate_number, Float mileage, String model,
-                 String oil_consumption, MyUser owner, String price,
-                 BmobDate registration_date, Float remaining_oil,
-                 String speed_changing_box, Boolean speed_changing_box_statu) {
-        this.antomative_lighting_statu = antomative_lighting_statu;
-        this.body_structure = body_structure;
-        this.brand = brand;
-        this.car = car;
-        this.car_location = car_location;
-        this.car_type = car_type;
-        this.displacement = displacement;
-        this.engine_number = engine_number;
-        this.engine_statu = engine_statu;
-        this.id = id;
-        this.img = img;
-        this.license_plate_number = license_plate_number;
-        this.mileage = mileage;
-        this.model = model;
-        this.oil_consumption = oil_consumption;
-        this.owner = owner;
-        this.price = price;
-        this.registration_date = registration_date;
-        this.remaining_oil = remaining_oil;
-        this.speed_changing_box = speed_changing_box;
-        this.speed_changing_box_statu = speed_changing_box_statu;
-    }
-
     public Boolean getAntomative_lighting_statu() {
         return antomative_lighting_statu;
     }

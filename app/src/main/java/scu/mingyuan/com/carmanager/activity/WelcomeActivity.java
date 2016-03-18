@@ -105,7 +105,7 @@ public class WelcomeActivity extends BaseActivity {
                         currentUser.setMobilePhoneNumberVerified(object.get(0).getMobilePhoneNumberVerified());
                         currentUser.setObjectId(object.get(0).getObjectId());
 
-                        UserCache.getUserCache(WelcomeActivity.this).setCurrentUser(currentUser);
+                        UserCache.getUserCache().setCurrentUser(currentUser);
                         mHandler.sendEmptyMessageDelayed(GO_HOME, TIME);
                     }
 

@@ -12,12 +12,12 @@
         "source": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/MaterialRefreshLib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-mdpi/abc_ic_clear_mtrl_alpha.png"
     },
     {
-        "merged": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/MaterialRefreshLib/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_list_divider_mtrl_alpha.9.png",
-        "source": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/MaterialRefreshLib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-mdpi/abc_list_divider_mtrl_alpha.9.png"
-    },
-    {
         "merged": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/library/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png",
         "source": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-mdpi/abc_scrubber_control_to_pressed_mtrl_005.png"
+    },
+    {
+        "merged": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/MaterialRefreshLib/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_list_divider_mtrl_alpha.9.png",
+        "source": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/MaterialRefreshLib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-mdpi/abc_list_divider_mtrl_alpha.9.png"
     },
     {
         "merged": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/MaterialRefreshLib/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_015.png",

@@ -40,12 +40,12 @@
         "source": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/MaterialRefreshLib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_list_selector_background_transition_holo_light.xml"
     },
     {
-        "merged": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/MaterialRefreshLib/build/intermediates/res/merged/androidTest/debug/drawable/abc_item_background_holo_dark.xml",
-        "source": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/MaterialRefreshLib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_item_background_holo_dark.xml"
-    },
-    {
         "merged": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_seekbar_track_material.xml",
         "source": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/MaterialRefreshLib/build/intermediates/res/merged/androidTest/debug/drawable/abc_item_background_holo_dark.xml",
+        "source": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/MaterialRefreshLib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_item_background_holo_dark.xml"
     },
     {
         "merged": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/MaterialRefreshLib/build/intermediates/res/merged/androidTest/debug/drawable/abc_seekbar_track_material.xml",
@@ -72,20 +72,20 @@
         "source": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_item_background_holo_light.xml"
     },
     {
-        "merged": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_btn_check_material.xml",
-        "source": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_btn_check_material.xml"
-    },
-    {
         "merged": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_btn_radio_material.xml",
         "source": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_btn_radio_material.xml"
     },
     {
-        "merged": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_ratingbar_full_material.xml",
-        "source": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_ratingbar_full_material.xml"
+        "merged": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_btn_check_material.xml",
+        "source": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_btn_check_material.xml"
     },
     {
         "merged": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_edit_text_material.xml",
         "source": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_ratingbar_full_material.xml",
+        "source": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_ratingbar_full_material.xml"
     },
     {
         "merged": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/library/build/intermediates/res/merged/androidTest/debug/drawable/abc_seekbar_thumb_material.xml",
@@ -96,12 +96,12 @@
         "source": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/MaterialRefreshLib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_seekbar_thumb_material.xml"
     },
     {
-        "merged": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/MaterialRefreshLib/build/intermediates/res/merged/androidTest/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
-        "source": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/MaterialRefreshLib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
-    },
-    {
         "merged": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/MaterialRefreshLib/build/intermediates/res/merged/androidTest/debug/drawable/abc_switch_thumb_material.xml",
         "source": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/MaterialRefreshLib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/MaterialRefreshLib/build/intermediates/res/merged/androidTest/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
+        "source": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/MaterialRefreshLib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
     },
     {
         "merged": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/MaterialRefreshLib/build/intermediates/res/merged/androidTest/debug/drawable/abc_btn_colored_material.xml",

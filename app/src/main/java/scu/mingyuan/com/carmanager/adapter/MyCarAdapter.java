@@ -36,6 +36,16 @@ public class MyCarAdapter extends BaseAdapter implements AbsListView.OnScrollLis
         this.mycarList = mycarList;
     }
 
+    public void add(MyCar myCar) {
+        mycarList.add(myCar);
+        notifyDataSetChanged();
+    }
+
+    public void addAll(ArrayList<MyCar> mycarList) {
+        this.mycarList.addAll(mycarList);
+        notifyDataSetChanged();
+    }
+
     @Override
     public int getCount() {
         return mycarList.size() + 1;
