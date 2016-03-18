@@ -24,6 +24,7 @@ public class MyCarDetailActivity extends AppCompatActivity {
     private static int id = -1;
     private static MyCar myCar = null;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

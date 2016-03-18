@@ -64,7 +64,6 @@ public class MyCarFragment extends Fragment {
 
         final MyUser currentUser = BmobUser.getCurrentUser(getActivity(), MyUser.class);
 
-
         if (MyCarCache.getMyCarCache().getMyCars().size() == 0) {
             loadData(currentUser);
         }
@@ -128,7 +127,9 @@ public class MyCarFragment extends Fragment {
             @Override
             public void onError(int code, String msg) {
 
+
             }
         });
     }
+
 }

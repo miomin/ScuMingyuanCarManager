@@ -63,6 +63,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activity.LoginActivity" />
         </activity>
+
+        <activity
+            android:name=".activity.MyCarDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.HomeActivity" />
+        </activity>
         <activity
             android:name=".activity.SelectCarActivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>

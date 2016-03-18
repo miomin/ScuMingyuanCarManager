@@ -7,7 +7,6 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -92,7 +91,6 @@ public class MyBanner extends FrameLayout {
      * 开始轮播图切换
      */
     public void startPlay() {
-        Log.i("yjk", "开始轮播");
         handler.sendEmptyMessageDelayed(MSG_UPDATE, 5000);
 
     }
@@ -209,16 +207,6 @@ public class MyBanner extends FrameLayout {
 
         @Override
         public void onPageScrollStateChanged(int arg0) {
-//            switch (arg0) {
-//                case ViewPager.SCROLL_STATE_DRAGGING:
-//                    Log.i("yjk", "正在滑动");
-//                    handler.sendEmptyMessage(MSG_PAUSE);
-//                    break;
-//                case ViewPager.SCROLL_STATE_IDLE:
-//                    Log.i("yjk", "停止滑动");
-//                    handler.sendEmptyMessageDelayed(MSG_CONTINU, 5000);
-//                    break;
-//            }
         }
 
         @Override

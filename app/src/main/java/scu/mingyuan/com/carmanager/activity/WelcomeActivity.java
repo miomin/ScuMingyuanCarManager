@@ -111,7 +111,7 @@ public class WelcomeActivity extends BaseActivity {
 
                     @Override
                     public void onError(int code, String msg) {
-                        Toast.makeText(WelcomeActivity.this, "登录失败：" + code + "," + msg, Toast.LENGTH_LONG).show();
+                        Toast.makeText(WelcomeActivity.this, getResources().getString(R.string.login_failed) + "：" + code + "," + msg, Toast.LENGTH_LONG).show();
                         mHandler.sendEmptyMessageDelayed(GO_LOGIN, TIME);
                     }
                 });
@@ -119,7 +119,7 @@ public class WelcomeActivity extends BaseActivity {
 
             @Override
             public void onFailure(int code, String msg) {
-                Toast.makeText(WelcomeActivity.this, "登录失败：" + code + "," + msg, Toast.LENGTH_LONG).show();
+                Toast.makeText(WelcomeActivity.this, getResources().getString(R.string.login_failed) + "：" + code + "," + msg, Toast.LENGTH_LONG).show();
                 mHandler.sendEmptyMessageDelayed(GO_LOGIN, TIME);
             }
         });

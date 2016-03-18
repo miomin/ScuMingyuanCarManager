@@ -9,23 +9,19 @@ import scu.mingyuan.com.carmanager.bean.MyCar;
  */
 public class MyCarCache {
 
-    private ArrayList<MyCar> myCars;
+    private ArrayList<MyCar> myCars = new ArrayList<>();
 
-    private static MyCarCache myCarCache;
+    private static MyCarCache mMyCarCache;
 
     private MyCarCache() {
-        myCars = new ArrayList<>();
+
     }
 
     synchronized public static MyCarCache getMyCarCache() {
-        if (myCarCache == null) {
-            myCarCache = new MyCarCache();
+        if (mMyCarCache == null) {
+            mMyCarCache = new MyCarCache();
         }
-        return myCarCache;
-    }
-
-    public ArrayList<MyCar> getMyCars() {
-        return myCars;
+        return mMyCarCache;
     }
 
     public void add(MyCar myCar) {
@@ -47,5 +43,9 @@ public class MyCarCache {
                 myCar = item;
         }
         return myCar;
+    }
+
+    public ArrayList<MyCar> getMyCars() {
+        return myCars;
     }
 }

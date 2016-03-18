@@ -5,7 +5,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="drawer_home">首页</string>
-    <string name="drawer_mycar">我的车辆</string>
+    <string name="drawer_mycar">我的汽车</string>
     <string name="drawer_order">订单查询</string>
     <string name="drawer_music">车载音频</string>
     <string name="drawer_query">信息查询</string>
@@ -20,6 +20,7 @@
     <string name="login_failed">登录失败</string>
     <string name="register">注册</string>
     <string name="register_succeed">注册成功</string>
+    <string name="register_failed">注册失败</string>
 
     <string name="title_activity_register">RegisterActivity</string>
 
