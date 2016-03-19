@@ -25,10 +25,9 @@ public class PlaceAdapter extends BaseAdapter {
     public static final int TYPE_SOURCE = 0;
     public static final int TYPE_DES = 1;
 
-    public PlaceAdapter(Context context, List<PoiInfo> data, int type) {
+    public PlaceAdapter(Context context, List<PoiInfo> data) {
         this.context = context;
         this.data = data;
-        this.type = type;
     }
 
     @Override
@@ -76,6 +75,11 @@ public class PlaceAdapter extends BaseAdapter {
         viewHolder.tv_city.setText(inf.address);
 
         return convertView;
+    }
+
+    public void setType(int type) {
+
+        this.type = type;
     }
 
     class ViewHolder {

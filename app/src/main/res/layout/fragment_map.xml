@@ -12,10 +12,9 @@
         android:layout_marginTop="20dp"
         android:background="@color/whiteLight"
         android:elevation="3dp"
-        android:orientation="horizontal"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        >
+        android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -34,8 +33,8 @@
                 android:gravity="center_vertical"
                 android:hint="@string/InputSourceAddressString"
                 android:padding="@dimen/activity_horizontal_margin"
-                android:textSize="14sp"
-                android:singleLine="true"/>
+                android:singleLine="true"
+                android:textSize="14sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -53,8 +52,8 @@
                 android:gravity="center_vertical"
                 android:hint="@string/InputDestinationAddress"
                 android:padding="@dimen/activity_horizontal_margin"
-                android:textSize="14sp"
-                android:singleLine="true"/>
+                android:singleLine="true"
+                android:textSize="14sp" />
 
         </LinearLayout>
 
@@ -94,20 +93,20 @@
         android:layout_marginRight="16dp"
         android:layout_marginTop="152dp"
         android:background="@color/whiteLight"
-        android:orientation="vertical"
-        android:elevation="3dp">
+        android:elevation="3dp"
+        android:orientation="vertical">
 
         <ImageButton
             android:id="@+id/btn_gasStation"
             android:layout_width="42dp"
             android:layout_height="42dp"
             android:background="?android:attr/selectableItemBackground"
-            android:src="@drawable/ic_gas_station_n"
-            />
+            android:src="@drawable/ic_gas_station_n" />
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/whiteDivideLine"/>
+            android:background="@color/whiteDivideLine" />
 
         <ImageButton
             android:id="@+id/btn_park"
@@ -119,7 +118,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/whiteDivideLine"/>
+            android:background="@color/whiteDivideLine" />
 
 
         <ImageButton
@@ -127,28 +126,96 @@
             android:layout_width="42dp"
             android:layout_height="42dp"
             android:background="?android:attr/selectableItemBackground"
-            android:src="@drawable/ic_location_n"/>
+            android:src="@drawable/ic_location_n" />
 
     </LinearLayout>
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/btn_navigation"
-        android:layout_width="124dp"
-        android:layout_height="124dp"
-        android:layout_alignParentRight="true"
+    <RelativeLayout
+        android:id="@+id/layout_desInf"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        android:layout_margin="16dp"
-        android:src="@drawable/ic_navigation"/>
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/whiteLight"
+        android:elevation="3dp"
+        android:visibility="gone">
 
-    <ListView
+        <TextView
+            android:id="@+id/tv_desAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:ems="12"
+            android:singleLine="true"
+            android:textColor="@color/blackLight"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_desAddDes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_desAdd"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="4dp"
+            android:ems="15"
+            android:singleLine="true"
+            android:textColor="@color/gray"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="122dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/whiteDivideLine" />
+
+            <Button
+                android:id="@+id/btn_showLine"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawablePadding="2dp"
+                android:drawableTop="@drawable/ic_navigation"
+                android:padding="10dp"
+                android:text="路线"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/whiteDivideLine" />
+
+            <Button
+                android:id="@+id/btn_navigation"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawablePadding="2dp"
+                android:drawableTop="@drawable/ic_car"
+                android:padding="10dp"
+                android:text="导航"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
         android:id="@+id/list_place"
         android:layout_width="match_parent"
         android:layout_height="300dp"
+        android:layout_below="@id/layout_input"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="8dp"
         android:background="@color/whiteLight"
-        android:elevation="3dp"
-        android:visibility="gone"
-        />
+        android:elevation="3dp" />
 </RelativeLayout>
