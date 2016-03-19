@@ -4,10 +4,32 @@
     android:background="#fff4f7f9"
     android:orientation="vertical">
 
-    <Spinner
-        android:id="@+id/provinceSpinner"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:entries="@array/province" />
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/provinceSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:entries="@array/province" />
+
+        <Spinner
+            android:id="@+id/citySpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:entries="@array/city" />
+
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:hint="请输入车牌号"
+            android:inputType="textEmailAddress"
+            android:password="false"
+            android:textSize="14sp" />
+    </LinearLayout>
 
 </LinearLayout>
