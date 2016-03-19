@@ -18,7 +18,9 @@ import scu.mingyuan.com.carmanager.baseactivity.BaseActivity;
 import scu.mingyuan.com.carmanager.fragment.QueryBreakRuleFragment;
 import scu.mingyuan.com.carmanager.fragment.QueryTrafficControlFragment;
 
-
+/**
+ * Created by 莫绪旻 on 16/3/19.
+ */
 public class QueryActivity extends BaseActivity {
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
@@ -83,11 +85,11 @@ public class QueryActivity extends BaseActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "违章查询";
+                    return getResources().getString(R.string.break_rule_query);
                 case 1:
-                    return "尾号限行";
+                    return getResources().getString(R.string.traffic_control);
                 case 2:
-                    return "配件查询";
+                    return getResources().getString(R.string.gadgets_query);
             }
             return null;
         }

@@ -45,6 +45,14 @@
     <string name="add_car">添加汽车</string>
     <string name="acc_car_des">添加你还有的其他汽车</string>
 
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+
+    <string name="break_rule_query">违章查询</string>
+    <string name="traffic_control">尾号限行</string>
+    <string name="gadgets_query">配件查询</string>
+
     <string name="large_text">
         "Material is the metaphor.\n\n"
 

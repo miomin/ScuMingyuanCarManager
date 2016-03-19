@@ -54,9 +54,6 @@ public class MyImageLoader {
 
     /**
      * 从内存卡中异步加载本地图片
-     *
-     * @param uri
-     * @param imageView
      */
     public void displayFromSDCard(String uri, ImageView imageView) {
         // String imageUri = "file:///mnt/sdcard/image.png"; // from SD card

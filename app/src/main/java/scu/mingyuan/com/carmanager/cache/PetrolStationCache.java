@@ -3,7 +3,7 @@ package scu.mingyuan.com.carmanager.cache;
 import scu.mingyuan.com.carmanager.bean.PetrolStationList;
 
 /**
- * Created by miomin on 16/3/18.
+ * Created by 莫绪旻 on 16/3/18.
  */
 public class PetrolStationCache {
 

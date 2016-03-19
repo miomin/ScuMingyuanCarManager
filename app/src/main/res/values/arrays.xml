@@ -36,4 +36,19 @@
         <item> Y </item>
         <item> Z </item>
     </string-array>
+
+    <string-array name="gas_type">
+        <item>90号汽油</item>
+        <item>93号汽油</item>
+        <item>97号汽油</item>
+        <item>30#号柴油</item>
+        <item>20#号柴油</item>
+        <item>10#号柴油</item>
+        <item>5#号柴油</item>
+        <item>0#号柴油</item>
+        <item>-5#号柴油</item>
+        <item>-10#号柴油</item>
+        <item>-21#号柴油</item>
+        <item>-35#号柴油</item>
+    </string-array>
 </resources>
