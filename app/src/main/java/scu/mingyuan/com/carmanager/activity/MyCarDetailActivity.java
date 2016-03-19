@@ -19,6 +19,9 @@ import scu.mingyuan.com.carmanager.R;
 import scu.mingyuan.com.carmanager.bean.MyCar;
 import scu.mingyuan.com.carmanager.cache.MyCarCache;
 
+/**
+ * Created by 莫绪旻 on 16/3/18.
+ */
 public class MyCarDetailActivity extends AppCompatActivity {
 
     private static int id = -1;

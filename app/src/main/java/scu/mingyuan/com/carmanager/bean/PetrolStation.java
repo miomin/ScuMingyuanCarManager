@@ -3,7 +3,7 @@ package scu.mingyuan.com.carmanager.bean;
 import java.util.List;
 
 /**
- * Created by miomin on 16/3/18.
+ * Created by 莫绪旻 on 16/3/18.
  */
 public class PetrolStation {
 

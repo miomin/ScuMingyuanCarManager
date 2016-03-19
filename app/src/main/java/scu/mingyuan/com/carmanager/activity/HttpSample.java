@@ -12,7 +12,7 @@ import scu.mingyuan.com.carmanager.httprequest.MioRequestManager;
 import scu.mingyuan.com.carmanager.resource.MyUrl;
 
 /**
- * Created by miomin on 16/3/18.
+ * Created by 莫绪旻 on 16/3/18.
  */
 public class HttpSample {
 
