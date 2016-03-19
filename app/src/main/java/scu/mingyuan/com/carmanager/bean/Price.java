@@ -5,8 +5,8 @@ package scu.mingyuan.com.carmanager.bean;
  */
 public class Price {
 
-    private String type;
-    private double price;
+    private String type;//E90
+    private double price;//7.31
 
     public double getPrice() {
         return price;

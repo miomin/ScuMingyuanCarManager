@@ -1,7 +1,11 @@
 package scu.mingyuan.com.carmanager.fragment;
 
+import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,6 +40,9 @@ public class MyCarFragment extends Fragment {
     private ListView lvMycar;
     private MyCarAdapter myCarAdapter;
 
+    // 加载中dialog
+    private ProgressDialog loadingdialog;
+
     public static MyCarFragment newInstance() {
         MyCarFragment fragment = new MyCarFragment();
         return fragment;
@@ -59,17 +66,20 @@ public class MyCarFragment extends Fragment {
 
     private void initView() {
         lvMycar = (ListView) fragmentView.findViewById(R.id.lvMycar);
-        myCarAdapter = new MyCarAdapter(MyCarCache.getMyCarCache().getMyCars(), getActivity());
+        myCarAdapter = new MyCarAdapter(MyCarCache.getMyCarCache().getMyCars(), getActivity(), this);
         lvMycar.setAdapter(myCarAdapter);
 
         final MyUser currentUser = BmobUser.getCurrentUser(getActivity(), MyUser.class);
 
         if (MyCarCache.getMyCarCache().getMyCars().size() == 0) {
+            loadingdialog = new ProgressDialog(getActivity());
+            loadingdialog.setMessage(getResources().getString(R.string.data_loading));
+            loadingdialog.show();
             loadData(currentUser);
         }
 
         materialRefreshLayout = (MaterialRefreshLayout) fragmentView.findViewById(R.id.refresh_layout);
-        materialRefreshLayout.setLoadMore(true);
+        materialRefreshLayout.setLoadMore(false);
         materialRefreshLayout.finishRefreshLoadMore();
         materialRefreshLayout.setMaterialRefreshListener(new MaterialRefreshListener() {
             @Override
@@ -111,6 +121,7 @@ public class MyCarFragment extends Fragment {
     }
 
     private void loadData(MyUser owner) {
+
         BmobQuery<MyCar> query = new BmobQuery<MyCar>();
         query.addWhereEqualTo("owner", owner);    // 查询当前用户的所有汽车
         query.order("-updatedAt");
@@ -122,6 +133,8 @@ public class MyCarFragment extends Fragment {
                 for (int i = 0; i < object.size(); i++) {
                     MyCarCache.getMyCarCache().add(object.get(i));
                 }
+                if (loadingdialog != null)
+                    loadingdialog.dismiss();
             }
 
             @Override
@@ -130,5 +143,16 @@ public class MyCarFragment extends Fragment {
 
             }
         });
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        //处理扫描结果（在界面上显示）
+        if (resultCode == Activity.RESULT_OK) {
+            Bundle bundle = data.getExtras();
+            String scanResult = bundle.getString("result");
+            Log.i("miomin", scanResult);
+        }
     }
 }

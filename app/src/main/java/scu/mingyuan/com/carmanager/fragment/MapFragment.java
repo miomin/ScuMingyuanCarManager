@@ -1,5 +1,7 @@
 package scu.mingyuan.com.carmanager.fragment;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.graphics.PixelFormat;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
@@ -456,6 +458,5 @@ public class MapFragment extends Fragment implements BDLocationListener, View.On
         if (imm != null) {
             imm.hideSoftInputFromWindow(getActivity().getWindow().getDecorView().getWindowToken(), 0);
         }
-
     }
 }

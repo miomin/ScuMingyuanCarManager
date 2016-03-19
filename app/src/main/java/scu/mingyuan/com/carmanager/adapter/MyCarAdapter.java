@@ -1,6 +1,8 @@
 package scu.mingyuan.com.carmanager.adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.support.v4.app.Fragment;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
@@ -15,7 +17,7 @@ import scu.mingyuan.com.carmanager.R;
 import scu.mingyuan.com.carmanager.bean.MyCar;
 import scu.mingyuan.com.carmanager.myview.MyBanner;
 import scu.mingyuan.com.carmanager.util.MyImageLoader;
-import scu.mingyuan.com.carmanager.zxing.ericssonlabs.BarCodeTestActivity;
+import scu.mingyuan.com.carmanager.zxing.activity.CaptureActivity;
 
 /**
  * Created by 莫绪旻 on 16/3/3.
@@ -32,10 +34,12 @@ public class MyCarAdapter extends BaseAdapter implements AbsListView.OnScrollLis
 
     private ArrayList<MyCar> mycarList;
     private Context context;
+    private Fragment fragment;
 
-    public MyCarAdapter(ArrayList<MyCar> mycarList, Context context) {
+    public MyCarAdapter(ArrayList<MyCar> mycarList, Context context, Fragment fragment) {
         this.context = context;
         this.mycarList = mycarList;
+        this.fragment = fragment;
     }
 
     public void add(MyCar myCar) {
@@ -95,7 +99,9 @@ public class MyCarAdapter extends BaseAdapter implements AbsListView.OnScrollLis
                     holder1.layout_add_mycar.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            BarCodeTestActivity.startActivity(context);
+                            //打开扫描界面扫描条形码或二维码
+                            Intent openCameraIntent = new Intent(fragment.getContext(), CaptureActivity.class);
+                            fragment.startActivityForResult(openCameraIntent, 0);
                         }
                     });
                     convertView.setTag(holder1);

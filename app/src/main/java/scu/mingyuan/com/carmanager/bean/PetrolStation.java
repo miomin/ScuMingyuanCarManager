@@ -8,21 +8,21 @@ import java.util.List;
 public class PetrolStation {
 
     private String id;
-    private String name;
-    private String area;
-    private String areaname;
-    private String address;
-    private String brandname;
-    private String type;
-    private String discount;
-    private String exhaust;
-    private String position;
-    private double lon;
-    private double lat;
-    private List<Price> price;
-    private List<Gastprice> gastprice;
-    private String fwlsmc;
-    private int distance;
+    private String name; //中油燕宾北邮加油站‎（办卡优惠）
+    private String area; //chongwen
+    private String areaname; //北京市 崇文区
+    private String address; //北京市崇文区天坛路12号，与东市场东街路交叉西南角（天坛北门往西一公里路南）。
+    private String brandname; //中石油
+    private String type; //加盟店
+    private String discount; //打折加油站
+    private String exhaust; //京Ⅴ
+    private String position;//116.401654,39.886973
+    private double lon; //116.40804671453
+    private double lat; //39.893324983272
+    private List<Price> price; // [{"type": "E90","price": "7.31"}
+    private List<Gastprice> gastprice; // {"name": "92#","price": "6.77"},{"name": "95#","price": "7.36"}
+    private String fwlsmc;//银联卡,信用卡支付
+    private int distance;//2564
 
     public String getAddress() {
         return address;

@@ -1,5 +1,7 @@
 package scu.mingyuan.com.carmanager.bean;
 
+import java.util.ArrayList;
+
 import cn.bmob.v3.BmobObject;
 import cn.bmob.v3.datatype.BmobDate;
 
@@ -29,6 +31,8 @@ public class MyCar extends BmobObject {
     private String speed_changing_box; //变速箱
     private String car_type; //车型
     private String body_structure; // 车身级别(几门几座)
+    private ArrayList<Float> oil_day;// 每日油耗
+    private ArrayList<Float> mileage_day; // 每日里程
 
     public Boolean getAntomative_lighting_statu() {
         return antomative_lighting_statu;
@@ -196,5 +200,21 @@ public class MyCar extends BmobObject {
 
     public void setSpeed_changing_box_statu(Boolean speed_changing_box_statu) {
         this.speed_changing_box_statu = speed_changing_box_statu;
+    }
+
+    public ArrayList<Float> getMileage_day() {
+        return mileage_day;
+    }
+
+    public void setMileage_day(ArrayList<Float> mileage_day) {
+        this.mileage_day = mileage_day;
+    }
+
+    public ArrayList<Float> getOil_day() {
+        return oil_day;
+    }
+
+    public void setOil_day(ArrayList<Float> oil_day) {
+        this.oil_day = oil_day;
     }
 }

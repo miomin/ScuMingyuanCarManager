@@ -36,7 +36,6 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
     private TextView tvUserName;
     private TextView tvEmail;
 
-
     public static void startActivity(Context context) {
         Intent intent = new Intent(context, HomeActivity.class);
         context.startActivity(intent);
@@ -123,7 +122,7 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
             transaction.commit();
 
         } else if (id == R.id.nav_query) {
-
+            QueryActivity.startActivity(this);
         } else if (id == R.id.nav_setting) {
 
         }

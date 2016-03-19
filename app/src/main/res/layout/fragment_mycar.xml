@@ -14,8 +14,10 @@
             android:id="@+id/refresh_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:overlay="true"
-            app:wave_show="false">
+            app:overlay="false"
+            app:wave_color="@color/colorPrimaryWave"
+            app:wave_height_type="normal"
+            app:wave_show="true">
 
             <ListView
                 android:id="@+id/lvMycar"
@@ -28,6 +30,10 @@
                 android:drawSelectorOnTop="false"
                 android:listSelector="@android:color/transparent"
                 android:scrollbars="none" />
+
+            <!--<ProgressBar-->
+                <!--android:layout_width="100dp"-->
+                <!--android:layout_height="100dp" />-->
 
         </com.cjj.MaterialRefreshLayout>
     </LinearLayout>

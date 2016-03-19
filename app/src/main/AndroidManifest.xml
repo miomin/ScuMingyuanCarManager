@@ -86,11 +86,13 @@
         <activity
             android:name=".activity.WelcomeActivity"
             android:theme="@style/AppTheme.NoActionBar">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
 
         <activity
@@ -111,6 +113,14 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:windowSoftInputMode="stateAlwaysHidden"></activity>
+
+        <activity
+            android:name=".activity.QueryActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.HomeActivity" />
+        </activity>
 
 
         <!-- ATTENTION: This was auto-generated to add Google Play services to your project for

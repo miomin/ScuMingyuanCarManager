@@ -5,8 +5,8 @@ package scu.mingyuan.com.carmanager.bean;
  */
 public class Gastprice {
 
-    private String name;
-    private double price;
+    private String name;//92#
+    private double price;//6.77
 
     public String getName() {
         return name;
