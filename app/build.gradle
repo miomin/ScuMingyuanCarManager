@@ -5,7 +5,7 @@ android {
         carmanagerkey {
             keyAlias 'carmanagerkey'
             keyPassword 'mingyuan'
-            storeFile file('/Users/miomin/Desktop/Askey/carmanagerkey.jks')
+            storeFile file('D:\\AndroidStudio\\KeyStore\\carmanagerkey.jks')
             storePassword 'mingyuan'
         }
     }
