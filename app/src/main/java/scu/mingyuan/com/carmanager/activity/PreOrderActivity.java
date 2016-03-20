@@ -23,6 +23,7 @@ import java.util.Date;
 
 import scu.mingyuan.com.carmanager.R;
 import scu.mingyuan.com.carmanager.baseactivity.BaseActivity;
+import scu.mingyuan.com.carmanager.bean.PetrolStation;
 import scu.mingyuan.com.carmanager.util.DensityUtil;
 
 /**
@@ -32,16 +33,24 @@ public class PreOrderActivity extends BaseActivity implements View.OnClickListen
 
     private ImageView iv_station_pic;
     private TextView tv_name;
-    private TextView tv_score;
+    private TextView tv_distance;
     private TextView tv_time;
     private TextView tv_type;
-    private EditText edit_amont;
-    private TextView tv_price;
+    private EditText edit_price;
+    private TextView tv_amont;
     private Button btn_pre_order;
 
     private PopupWindow popup_selecter;
 
-    private String[] gas_type = getResources().getStringArray(R.array.gas_type);
+    private String[] gas_type;
+
+    private PetrolStation petrolStation;
+
+    private int year;
+    private int month;
+    private int day;
+    private String type;
+    private int price;
 
     private static final String TAG = "YJK";
 
@@ -50,29 +59,49 @@ public class PreOrderActivity extends BaseActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pre_order);
 
+        gas_type = getResources().getStringArray(R.array.gas_type);
+
+        Intent intent = getIntent();
+        if (intent != null) {
+
+            petrolStation = (PetrolStation) intent.getSerializableExtra("petrolStation");
+            Log.i(TAG, "onMarkerClick " + petrolStation.toString());
+
+        }
         initView();
     }
 
     private void initView() {
         iv_station_pic = (ImageView) findViewById(R.id.iv_station_pic);
         tv_name = (TextView) findViewById(R.id.tv_name);
-        tv_score = (TextView) findViewById(R.id.tv_score);
+        tv_distance = (TextView) findViewById(R.id.tv_distance);
         tv_time = (TextView) findViewById(R.id.tv_time);
         tv_type = (TextView) findViewById(R.id.tv_type);
-        edit_amont = (EditText) findViewById(R.id.edit_amont);
-        tv_price = (TextView) findViewById(R.id.tv_price);
+        edit_price = (EditText) findViewById(R.id.edit_price);
+        tv_amont = (TextView) findViewById(R.id.tv_amont);
         btn_pre_order = (Button) findViewById(R.id.btn_preorder);
 
         tv_time.setOnClickListener(this);
         tv_type.setOnClickListener(this);
         btn_pre_order.setOnClickListener(this);
 
+        tv_name.setText(petrolStation.getName());
+        tv_distance.setText(petrolStation.getDistance() + "千米");
+
+        long time = System.currentTimeMillis();
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        String times[] = format.format(new Date(time)).split("-");
+        year = Integer.parseInt(times[0]);
+        month = Integer.parseInt(times[1]);
+        day = Integer.parseInt(times[2]);
+
+        tv_time.setText(year + "年" + month + "月" + day + "日");
 
     }
 
-    public static void startAction(Context context) {
+    public static void startAction(Context context, PetrolStation petrolStation) {
         Intent starter = new Intent(context, PreOrderActivity.class);
-//        starter.putExtra();
+        starter.putExtra("petrolStation", petrolStation);
         context.startActivity(starter);
     }
 
@@ -83,16 +112,14 @@ public class PreOrderActivity extends BaseActivity implements View.OnClickListen
         switch (v.getId()) {
             case R.id.tv_time:
 
-                long time = System.currentTimeMillis();
-                SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-                String times[] = format.format(new Date(time)).split("-");
-                int year = Integer.parseInt(times[0]);
-                final int month = Integer.parseInt(times[1]);
-                int day = Integer.parseInt(times[2]);
 
                 new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+
+                        year = year;
+                        month = monthOfYear;
+                        day = dayOfMonth;
 
                         tv_time.setText(year + getResources().getString(R.string.year)
                                 + monthOfYear + getResources().getString(R.string.month)
@@ -101,6 +128,7 @@ public class PreOrderActivity extends BaseActivity implements View.OnClickListen
                     }
                 }, year, month, day).show();
                 break;
+
             case R.id.tv_type:
                 if (popup_selecter == null) {
                     ListView list_type = new ListView(this);
@@ -125,6 +153,10 @@ public class PreOrderActivity extends BaseActivity implements View.OnClickListen
                 popup_selecter.showAsDropDown(tv_type, 0, 16);
                 break;
             case R.id.btn_preorder:
+
+                String preOrder = "time:" + tv_time.getText().toString() + "type:" + tv_type.getText().toString()
+                        + "price:" + edit_price.getText().toString() + "amont:" + tv_amont.getText().toString();
+
                 break;
         }
     }

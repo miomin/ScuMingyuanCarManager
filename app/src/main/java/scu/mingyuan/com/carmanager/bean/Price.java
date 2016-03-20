@@ -1,9 +1,11 @@
 package scu.mingyuan.com.carmanager.bean;
 
+import java.io.Serializable;
+
 /**
  * Created by 莫绪旻 on 16/3/18.
  */
-public class Price {
+public class Price implements Serializable {
 
     private String type;//E90
     private double price;//7.31

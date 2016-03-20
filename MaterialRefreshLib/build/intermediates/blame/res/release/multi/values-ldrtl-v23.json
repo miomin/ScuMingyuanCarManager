@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/MaterialRefreshLib/build/intermediates/res/merged/release/values-ldrtl-v23/values-ldrtl-v23.xml",
+        "outputFile": "D:\\Users\\miomin\\Desktop\\workspaces\\AndroidStudio\\ScuMingyuanCarManager\\MaterialRefreshLib\\build\\intermediates\\res\\merged\\release\\values-ldrtl-v23\\values-ldrtl-v23.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 163
                 },
                 "from": {
-                    "file": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/MaterialRefreshLib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-ldrtl-v23/values-ldrtl-v23.xml",
+                    "file": "D:\\Users\\miomin\\Desktop\\workspaces\\AndroidStudio\\ScuMingyuanCarManager\\MaterialRefreshLib\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-ldrtl-v23\\values-ldrtl-v23.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -24,7 +24,7 @@
         ]
     },
     {
-        "outputFile": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/library/build/intermediates/res/merged/release/values-ldrtl-v23/values-ldrtl-v23.xml",
+        "outputFile": "D:\\Users\\miomin\\Desktop\\workspaces\\AndroidStudio\\ScuMingyuanCarManager\\library\\build\\intermediates\\res\\merged\\release\\values-ldrtl-v23\\values-ldrtl-v23.xml",
         "map": [
             {
                 "to": {
@@ -35,7 +35,31 @@
                     "endOffset": 163
                 },
                 "from": {
-                    "file": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-ldrtl-v23/values-ldrtl-v23.xml",
+                    "file": "D:\\Users\\miomin\\Desktop\\workspaces\\AndroidStudio\\ScuMingyuanCarManager\\library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-ldrtl-v23\\values-ldrtl-v23.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 240,
+                        "endColumn": 112,
+                        "endOffset": 348
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "D:\\ScuMingyuanCarManager\\MaterialRefreshLib\\build\\intermediates\\res\\merged\\release\\values-ldrtl-v23\\values-ldrtl-v23.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 112,
+                    "endOffset": 163
+                },
+                "from": {
+                    "file": "D:\\ScuMingyuanCarManager\\MaterialRefreshLib\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-ldrtl-v23\\values-ldrtl-v23.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,

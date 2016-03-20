@@ -32,7 +32,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tv_score"
+            android:id="@+id/tv_distance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_name"
@@ -45,7 +45,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tv_score"
+            android:layout_below="@id/tv_distance"
             android:layout_marginTop="5dp"
             android:layout_toRightOf="@id/iv_station_pic"
             android:text="加油站"
@@ -127,11 +127,11 @@
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="加油总量"
+            android:text="加油价格"
             android:textSize="14sp" />
 
         <EditText
-            android:id="@+id/edit_amont"
+            android:id="@+id/edit_price"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="10dp"
@@ -141,7 +141,8 @@
             android:gravity="center_vertical"
             android:paddingLeft="16dp"
             android:textColor="@color/blackLight"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:inputType="number"/>
 
     </LinearLayout>
 
@@ -155,11 +156,11 @@
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="最终价格"
+            android:text="加油总量"
             android:textSize="14sp" />
 
         <TextView
-            android:id="@+id/tv_price"
+            android:id="@+id/tv_amont"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="10dp"

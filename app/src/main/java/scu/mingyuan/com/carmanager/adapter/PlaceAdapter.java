@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.baidu.mapapi.search.core.PoiInfo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import scu.mingyuan.com.carmanager.R;
@@ -25,6 +26,7 @@ public class PlaceAdapter extends BaseAdapter {
     public static final int TYPE_SOURCE = 0;
     public static final int TYPE_DES = 1;
 
+    private static final String TAG = "YJK";
     public PlaceAdapter(Context context, List<PoiInfo> data) {
         this.context = context;
         this.data = data;
@@ -80,6 +82,11 @@ public class PlaceAdapter extends BaseAdapter {
     public void setType(int type) {
 
         this.type = type;
+    }
+
+    public void setData(ArrayList<PoiInfo> data)
+    {
+        this.data = data;
     }
 
     class ViewHolder {

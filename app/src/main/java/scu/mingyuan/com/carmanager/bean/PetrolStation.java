@@ -1,11 +1,12 @@
 package scu.mingyuan.com.carmanager.bean;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by 莫绪旻 on 16/3/18.
  */
-public class PetrolStation {
+public class PetrolStation implements Serializable{
 
     private String id;
     private String name; //中油燕宾北邮加油站‎（办卡优惠）
