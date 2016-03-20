@@ -23,10 +23,10 @@
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <ImageView
+                android:id="@+id/ivCar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:src="@drawable/default_car"
                 app:layout_collapseMode="parallax"
                 app:layout_collapseParallaxMultiplier="0" />
 
@@ -54,9 +54,12 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/tvModel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="48dp"
                 android:background="@color/transparent"
+                android:singleLine="true"
                 android:text="MODEL S 2014款 MODEL S P85"
                 android:textColor="@color/blackLight"
                 android:textSize="20sp" />
@@ -105,6 +108,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/tv_registration_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
@@ -132,12 +136,14 @@
                     android:gravity="center_vertical">
 
                     <CheckBox
+                        android:id="@+id/cb_engine"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:checked="true"
                         android:clickable="false" />
 
                     <TextView
+                        android:id="@+id/tv_engine"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="8dp"
@@ -152,16 +158,18 @@
                     android:layout_weight="1">
 
                     <CheckBox
+                        android:id="@+id/cb_speed_change_box"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:checked="false"
                         android:clickable="false" />
 
                     <TextView
+                        android:id="@+id/tv_speed_change_box"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="8dp"
-                        android:text="引擎状态"
+                        android:text="变速箱状态"
                         android:textColor="@color/grayLight"
                         android:textSize="12sp" />
 
@@ -173,16 +181,18 @@
                     android:layout_weight="1">
 
                     <CheckBox
+                        android:id="@+id/cb_antomative_lighting_statu"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:checked="true"
                         android:clickable="false" />
 
                     <TextView
+                        android:id="@+id/tv_antomative_lighting_statu"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="8dp"
-                        android:text="引擎状态"
+                        android:text="车灯状态"
                         android:textColor="@color/colorPrimary"
                         android:textSize="12sp" />
 
@@ -214,9 +224,11 @@
                         android:background="@drawable/white_bg_ripple"
                         android:clickable="true"
                         android:gravity="center"
+                        android:onClick="startMillActivity"
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tv_mileage"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
@@ -246,6 +258,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tv_license_plate_number"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
@@ -275,6 +288,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tv_car_location"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
@@ -315,6 +329,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tv_registration_date_sub"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
@@ -344,6 +359,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tv_remaining_oil"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"

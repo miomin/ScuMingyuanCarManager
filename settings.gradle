@@ -1,1 +1,1 @@
-include ':app', ':MaterialRefreshLib', ':zxinglib', ':pull_to_refresh'
+include ':app', ':MaterialRefreshLib', ':zxinglib', ':pull_to_refresh', ':MPChartLib'

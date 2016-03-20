@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.util.List;
@@ -15,6 +16,7 @@ import scu.mingyuan.com.carmanager.R;
 import scu.mingyuan.com.carmanager.baseactivity.BaseActivity;
 import scu.mingyuan.com.carmanager.bean.MyUser;
 import scu.mingyuan.com.carmanager.cache.UserCache;
+import scu.mingyuan.com.carmanager.util.MyImageLoader;
 
 /**
  * 描述:欢迎页 创建日期:2016/3/5
@@ -27,6 +29,8 @@ public class WelcomeActivity extends BaseActivity {
     private static final int TIME = 1000;
     private static final int GO_LOGIN = 1000;
     private static final int GO_HOME = 1001;
+
+    private ImageView bg,logo;
 
     private Handler mHandler = new Handler() {
         public void handleMessage(android.os.Message msg) {
@@ -47,6 +51,11 @@ public class WelcomeActivity extends BaseActivity {
         setContentView(R.layout.activity_welcome);
         init();
         instance = this;
+        bg = (ImageView) findViewById(R.id.bg);
+        logo = (ImageView) findViewById(R.id.logo);
+
+        MyImageLoader.getInstance().dispalyFromAssets("full_bg.png",bg);
+        MyImageLoader.getInstance().dispalyFromAssets("logo_text.png",logo);
     }
 
     private void init() {

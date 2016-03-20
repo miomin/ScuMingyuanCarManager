@@ -10,6 +10,8 @@ import cn.bmob.v3.datatype.BmobDate;
  */
 public class MyCar extends BmobObject {
 
+    //格式：   宝马;Z4;2013款 sDrive20i领先型;川A 66666;DHFHFJDH787878FD;3.6;45.6;四川 成都;1;1;1;2015-4-12 0:0:0;3466197373;11111;57.8;2.0L;8.8-12.1L;自动;跑车;2门2座;0;0
+
     private Integer id;
     private String brand; //品牌
     private String car; //车系

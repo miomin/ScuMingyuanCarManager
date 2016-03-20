@@ -124,7 +124,7 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
         } else if (id == R.id.nav_query) {
             QueryActivity.startActivity(this);
         } else if (id == R.id.nav_setting) {
-
+            SettingsActivity.startActivity(this);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

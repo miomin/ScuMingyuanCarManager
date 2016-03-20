@@ -37,6 +37,28 @@
         <item> Z </item>
     </string-array>
 
+    <string-array name="city_traffic_control">
+        <item> 北京 </item>
+        <item> 贵阳 </item>
+        <item> 杭州 </item>
+        <item> 兰州 </item>
+        <item> 天津 </item>
+        <item> 成都 </item>
+        <item> 南昌 </item>
+        <item> 长春 </item>
+    </string-array>
+
+    <string-array name="city_traffic_control_pingying">
+        <item> beijing </item>
+        <item> guiyang </item>
+        <item> hangzhou </item>
+        <item> lanzhou </item>
+        <item> tianjing </item>
+        <item> chengdu </item>
+        <item> nanchang </item>
+        <item> changchun </item>
+    </string-array>
+
     <string-array name="gas_type">
         <item>90号汽油</item>
         <item>93号汽油</item>
