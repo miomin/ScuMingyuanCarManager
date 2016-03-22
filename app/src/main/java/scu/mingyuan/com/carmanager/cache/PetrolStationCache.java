@@ -15,9 +15,14 @@ public class PetrolStationCache {
 
     }
 
-    synchronized public static PetrolStationCache getInstance() {
+    // 双重检查锁定优化
+    public static PetrolStationCache getInstance() {
         if (petrolStationCache == null) {
-            petrolStationCache = new PetrolStationCache();
+            synchronized (PetrolStationCache.class) {
+                if (petrolStationCache == null) {
+                    petrolStationCache = new PetrolStationCache();
+                }
+            }
         }
         return petrolStationCache;
     }

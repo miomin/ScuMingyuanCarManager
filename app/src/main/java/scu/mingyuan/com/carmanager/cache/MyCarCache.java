@@ -17,9 +17,14 @@ public class MyCarCache {
 
     }
 
-    synchronized public static MyCarCache getMyCarCache() {
+    // 双重检查锁定优化
+    public static MyCarCache getMyCarCache() {
         if (mMyCarCache == null) {
-            mMyCarCache = new MyCarCache();
+            synchronized (MyCarCache.class) {
+                if (mMyCarCache == null) {
+                    mMyCarCache = new MyCarCache();
+                }
+            }
         }
         return mMyCarCache;
     }

@@ -15,9 +15,14 @@ public class UserCache {
 
     }
 
+    // 双重检查锁定优化
     synchronized public static UserCache getUserCache() {
         if (mUserCache == null) {
-            mUserCache = new UserCache();
+            synchronized (UserCache.class) {
+                if (mUserCache == null) {
+                    mUserCache = new UserCache();
+                }
+            }
         }
         return mUserCache;
     }
