@@ -140,7 +140,14 @@ public class MyCarAdapter extends BaseAdapter implements AbsListView.OnScrollLis
             case TYPE_2:
                 MyCar myCar = mycarList.get(position - 1);
                 holder2.tvType.setText(myCar.getCar_type());
-                MyImageLoader.getInstance().displayFromNet(myCar.getImg(), holder2.icon_car);
+
+                // 防止图片闪动
+                //将url和ivicon绑定
+                holder2.icon_car.setTag(myCar.getImg());
+                if (holder2.icon_car.getTag().equals(myCar.getImg())) {
+                    MyImageLoader.getInstance().displayFromNet(myCar.getImg(), holder2.icon_car);
+                }
+
                 holder2.tvBrand.setText(myCar.getBrand());
                 holder2.tvCar.setText(myCar.getCar());
                 holder2.tvCarLocation.setText(myCar.getCar_location());
@@ -160,10 +167,10 @@ public class MyCarAdapter extends BaseAdapter implements AbsListView.OnScrollLis
     public void onScrollStateChanged(AbsListView view, int scrollState) {
         if (scrollState == SCROLL_STATE_IDLE) {
             // 加载可见项
-            MiominImageLoader.loadImages(mStart, mEnd);
+//            MiominImageLoader.loadImages(mStart, mEnd);
         } else {
             // 停止加载
-            MiominImageLoader.cancelAllTasks();
+//            MiominImageLoader.cancelAllTasks();
         }
     }
 
