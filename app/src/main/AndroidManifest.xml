@@ -76,9 +76,6 @@
                 android:value=".activity.HomeActivity" />
         </activity>
         <activity
-            android:name=".activity.SelectCarActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".activity.WelcomeActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

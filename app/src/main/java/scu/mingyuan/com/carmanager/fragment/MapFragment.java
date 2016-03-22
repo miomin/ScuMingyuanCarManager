@@ -60,7 +60,6 @@ import java.util.List;
 
 import scu.mingyuan.com.carmanager.R;
 import scu.mingyuan.com.carmanager.activity.PreOrderActivity;
-import scu.mingyuan.com.carmanager.adapter.PlaceAdapter;
 import scu.mingyuan.com.carmanager.bean.DrivingRouteOverlay;
 import scu.mingyuan.com.carmanager.bean.PetrolStation;
 import scu.mingyuan.com.carmanager.bean.PetrolStationList;
