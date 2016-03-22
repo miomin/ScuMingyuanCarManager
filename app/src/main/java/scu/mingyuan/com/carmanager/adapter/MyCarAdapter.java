@@ -158,13 +158,13 @@ public class MyCarAdapter extends BaseAdapter implements AbsListView.OnScrollLis
     // 停止滑动时才加载，滑动时停止加载
     @Override
     public void onScrollStateChanged(AbsListView view, int scrollState) {
-//        if (scrollState == SCROLL_STATE_IDLE) {
-//            // 加载可见项
-//            MiominImageLoader.loadImages(mStart, mEnd);
-//        } else {
-//            // 停止加载
-//            MiominImageLoader.cancelAllTasks();
-//        }
+        if (scrollState == SCROLL_STATE_IDLE) {
+            // 加载可见项
+            MiominImageLoader.loadImages(mStart, mEnd);
+        } else {
+            // 停止加载
+            MiominImageLoader.cancelAllTasks();
+        }
     }
 
     // 在滑动过程中找到可见项的首尾下标

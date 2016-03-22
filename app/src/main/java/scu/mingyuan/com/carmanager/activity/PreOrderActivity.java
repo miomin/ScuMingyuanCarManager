@@ -4,6 +4,7 @@ import android.annotation.TargetApi;
 import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,6 +18,9 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.zxing.WriterException;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -25,6 +29,7 @@ import scu.mingyuan.com.carmanager.R;
 import scu.mingyuan.com.carmanager.baseactivity.BaseActivity;
 import scu.mingyuan.com.carmanager.bean.PetrolStation;
 import scu.mingyuan.com.carmanager.util.DensityUtil;
+import scu.mingyuan.com.carmanager.zxing.encoding.EncodingHandler;
 
 /**
  * Created by 应俊康 on 16/3/19.
@@ -39,6 +44,8 @@ public class PreOrderActivity extends BaseActivity implements View.OnClickListen
     private EditText edit_price;
     private TextView tv_amont;
     private Button btn_pre_order;
+
+    private ImageView qrImgImageView;
 
     private PopupWindow popup_selecter;
 
@@ -80,6 +87,7 @@ public class PreOrderActivity extends BaseActivity implements View.OnClickListen
         edit_price = (EditText) findViewById(R.id.edit_price);
         tv_amont = (TextView) findViewById(R.id.tv_amont);
         btn_pre_order = (Button) findViewById(R.id.btn_preorder);
+        qrImgImageView = (ImageView) findViewById(R.id.qrImgImageView);
 
         tv_time.setOnClickListener(this);
         tv_type.setOnClickListener(this);
@@ -156,6 +164,18 @@ public class PreOrderActivity extends BaseActivity implements View.OnClickListen
 
                 String preOrder = "time:" + tv_time.getText().toString() + "type:" + tv_type.getText().toString()
                         + "price:" + edit_price.getText().toString() + "amont:" + tv_amont.getText().toString();
+
+                if (!preOrder.equals("")) {
+                    //根据字符串生成二维码图片并显示在界面上，第二个参数为图片的大小（350*350）
+                    try {
+                        Bitmap qrCodeBitmap = EncodingHandler.createQRCode(preOrder, 350);
+                        qrImgImageView.setImageBitmap(qrCodeBitmap);
+                    } catch (WriterException e) {
+                        e.printStackTrace();
+                    }
+                } else {
+                    Toast.makeText(PreOrderActivity.this, "Text can not be empty", Toast.LENGTH_SHORT).show();
+                }
 
                 break;
         }

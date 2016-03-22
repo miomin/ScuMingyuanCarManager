@@ -75,7 +75,6 @@ import scu.mingyuan.com.carmanager.resource.MyUrl;
  */
 public class MapFragment extends Fragment implements BDLocationListener, View.OnClickListener {
 
-
     // fragment的布局
     private View fragmentView;
 
@@ -145,6 +144,7 @@ public class MapFragment extends Fragment implements BDLocationListener, View.On
         super.onCreate(savedInstanceState);
         getActivity().setTitle(R.string.app_name);
         getActivity().getWindow().setFormat(PixelFormat.TRANSLUCENT);
+
     }
 
     public static MapFragment newInstance() {

@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "D:\\Users\\miomin\\Desktop\\workspaces\\AndroidStudio\\ScuMingyuanCarManager\\MaterialRefreshLib\\build\\intermediates\\res\\merged\\release\\values-h320dp-v13\\values-h320dp-v13.xml",
+        "outputFile": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/D:\\ScuMingyuanCarManager\\MaterialRefreshLib\\build\\intermediates\\res\\merged\\release\\values-h320dp-v13\\values-h320dp-v13.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "D:\\Users\\miomin\\Desktop\\workspaces\\AndroidStudio\\ScuMingyuanCarManager\\MaterialRefreshLib\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-h320dp\\values-h320dp.xml",
+                    "file": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/D:\\ScuMingyuanCarManager\\MaterialRefreshLib\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-h320dp\\values-h320dp.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -24,7 +24,7 @@
         ]
     },
     {
-        "outputFile": "D:\\ScuMingyuanCarManager\\MaterialRefreshLib\\build\\intermediates\\res\\merged\\release\\values-h320dp-v13\\values-h320dp-v13.xml",
+        "outputFile": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/D:\\Users\\miomin\\Desktop\\workspaces\\AndroidStudio\\ScuMingyuanCarManager\\MaterialRefreshLib\\build\\intermediates\\res\\merged\\release\\values-h320dp-v13\\values-h320dp-v13.xml",
         "map": [
             {
                 "to": {
@@ -35,7 +35,7 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "D:\\ScuMingyuanCarManager\\MaterialRefreshLib\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-h320dp\\values-h320dp.xml",
+                    "file": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/D:\\Users\\miomin\\Desktop\\workspaces\\AndroidStudio\\ScuMingyuanCarManager\\MaterialRefreshLib\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-h320dp\\values-h320dp.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -48,7 +48,7 @@
         ]
     },
     {
-        "outputFile": "D:\\Users\\miomin\\Desktop\\workspaces\\AndroidStudio\\ScuMingyuanCarManager\\library\\build\\intermediates\\res\\merged\\release\\values-h320dp-v13\\values-h320dp-v13.xml",
+        "outputFile": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/D:\\Users\\miomin\\Desktop\\workspaces\\AndroidStudio\\ScuMingyuanCarManager\\library\\build\\intermediates\\res\\merged\\release\\values-h320dp-v13\\values-h320dp-v13.xml",
         "map": [
             {
                 "to": {
@@ -59,7 +59,31 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "D:\\Users\\miomin\\Desktop\\workspaces\\AndroidStudio\\ScuMingyuanCarManager\\library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-h320dp\\values-h320dp.xml",
+                    "file": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/D:\\Users\\miomin\\Desktop\\workspaces\\AndroidStudio\\ScuMingyuanCarManager\\library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-h320dp\\values-h320dp.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 231,
+                        "endColumn": 57,
+                        "endOffset": 284
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/MaterialRefreshLib/build/intermediates/res/merged/release/values-h320dp-v13/values-h320dp-v13.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 57,
+                    "endOffset": 108
+                },
+                "from": {
+                    "file": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/MaterialRefreshLib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-h320dp/values-h320dp.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
