@@ -1,15 +1,7 @@
 [
     {
-        "merged": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/D:\\ScuMingyuanCarManager\\pull_to_refresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\pull_to_refresh_header_vertical.xml",
-        "source": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/D:\\ScuMingyuanCarManager\\pull_to_refresh\\build\\intermediates\\bundles\\debug\\res\\layout\\pull_to_refresh_header_vertical.xml"
-    },
-    {
         "merged": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/pull_to_refresh/build/intermediates/res/merged/androidTest/debug/layout/pull_to_refresh_header_vertical.xml",
         "source": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/pull_to_refresh/build/intermediates/bundles/debug/res/layout/pull_to_refresh_header_vertical.xml"
-    },
-    {
-        "merged": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/D:\\ScuMingyuanCarManager\\pull_to_refresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\pull_to_refresh_header_horizontal.xml",
-        "source": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/D:\\ScuMingyuanCarManager\\pull_to_refresh\\build\\intermediates\\bundles\\debug\\res\\layout\\pull_to_refresh_header_horizontal.xml"
     },
     {
         "merged": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/pull_to_refresh/build/intermediates/res/merged/androidTest/debug/layout/pull_to_refresh_header_horizontal.xml",

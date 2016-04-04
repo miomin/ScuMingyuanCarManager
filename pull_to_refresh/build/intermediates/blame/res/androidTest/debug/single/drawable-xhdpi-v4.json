@@ -1,17 +1,5 @@
 [
     {
-        "merged": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/D:\\ScuMingyuanCarManager\\pull_to_refresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\indicator_arrow.png",
-        "source": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/D:\\ScuMingyuanCarManager\\pull_to_refresh\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\indicator_arrow.png"
-    },
-    {
-        "merged": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/D:\\ScuMingyuanCarManager\\pull_to_refresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_ptr_rotate.png",
-        "source": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/D:\\ScuMingyuanCarManager\\pull_to_refresh\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\default_ptr_rotate.png"
-    },
-    {
-        "merged": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/D:\\ScuMingyuanCarManager\\pull_to_refresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_ptr_flip.png",
-        "source": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/D:\\ScuMingyuanCarManager\\pull_to_refresh\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\default_ptr_flip.png"
-    },
-    {
         "merged": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/pull_to_refresh/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/default_ptr_rotate.png",
         "source": "/Users/miomin/Desktop/workspaces/AndroidStudio/ScuMingyuanCarManager/pull_to_refresh/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/default_ptr_rotate.png"
     },

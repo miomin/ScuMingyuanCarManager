@@ -3,6 +3,8 @@ package scu.mingyuan.com.carmanager.application;
 import android.annotation.SuppressLint;
 import android.app.Application;
 import android.content.Context;
+
+import com.baidu.mapapi.SDKInitializer;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.cache.memory.impl.UsingFreqLimitedMemoryCache;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -10,9 +12,7 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.nostra13.universalimageloader.core.download.BaseImageDownloader;
-import com.baidu.mapapi.SDKInitializer;
-
-import com.baidu.mapapi.SDKInitializer;
+import com.squareup.leakcanary.LeakCanary;
 
 import cn.bmob.v3.Bmob;
 
@@ -36,6 +36,9 @@ public class MyApplication extends Application {
 
         //初始化BaiduMapSDK
         SDKInitializer.initialize(this);
+
+        // 配置LeakCanary
+        LeakCanary.install(this);
 
         mInstance = this;
     }
