@@ -12,7 +12,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-    <scu.mingyuan.com.carmanager.app.myview.XCRoundImageView
+    <scu.mingyuan.com.carmanager.myview.XCRoundImageView
         android:id="@+id/ivUserHead"
         android:layout_width="70dp"
         android:layout_height="70dp"
