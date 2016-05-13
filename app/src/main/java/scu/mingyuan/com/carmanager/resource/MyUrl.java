@@ -1,4 +1,4 @@
-package scu.mingyuan.com.carmanager.app.resource;
+package scu.mingyuan.com.carmanager.resource;
 
 /**
  * Created by 莫绪旻 on 16/3/18.

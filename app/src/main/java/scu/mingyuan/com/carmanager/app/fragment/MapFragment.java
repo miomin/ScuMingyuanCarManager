@@ -65,7 +65,7 @@ import scu.mingyuan.com.carmanager.app.bean.DrivingRouteOverlay;
 import scu.mingyuan.com.carmanager.app.bean.PetrolStation;
 import scu.mingyuan.com.carmanager.app.bean.PetrolStationList;
 import scu.mingyuan.com.carmanager.app.cache.PetrolStationCache;
-import scu.mingyuan.com.carmanager.app.resource.MyUrl;
+import scu.mingyuan.com.carmanager.resource.MyUrl;
 import scu.mingyuan.com.carmanager.http.httpparse.JsonRequestListener;
 import scu.mingyuan.com.carmanager.http.httprequest.MioRequest;
 import scu.mingyuan.com.carmanager.http.httprequest.MioRequestManager;

@@ -14,7 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import scu.mingyuan.com.carmanager.R;
-import scu.mingyuan.com.carmanager.app.resource.MyUrl;
+import scu.mingyuan.com.carmanager.resource.MyUrl;
 import scu.mingyuan.com.carmanager.http.httpparse.StringRequestListener;
 import scu.mingyuan.com.carmanager.http.httprequest.MioRequest;
 import scu.mingyuan.com.carmanager.http.httprequest.MioRequestManager;
