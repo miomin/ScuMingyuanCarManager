@@ -1,4 +1,4 @@
-package scu.mingyuan.com.carmanager.app.util;
+package scu.mingyuan.com.carmanager.utils;
 
 import android.widget.ImageView;
 

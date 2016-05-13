@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import scu.mingyuan.com.carmanager.R;
 import scu.mingyuan.com.carmanager.app.bean.MyCar;
 import scu.mingyuan.com.carmanager.app.myview.MyBanner;
-import scu.mingyuan.com.carmanager.app.util.MyImageLoader;
+import scu.mingyuan.com.carmanager.utils.MyImageLoader;
 import scu.mingyuan.com.carmanager.zxing.activity.CaptureActivity;
 
 /**

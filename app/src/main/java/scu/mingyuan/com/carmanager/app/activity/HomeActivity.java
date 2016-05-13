@@ -23,7 +23,7 @@ import scu.mingyuan.com.carmanager.app.fragment.MapFragment;
 import scu.mingyuan.com.carmanager.app.fragment.MusicFragment;
 import scu.mingyuan.com.carmanager.app.fragment.MyCarFragment;
 import scu.mingyuan.com.carmanager.app.fragment.OrderFragment;
-import scu.mingyuan.com.carmanager.app.util.MyImageLoader;
+import scu.mingyuan.com.carmanager.utils.MyImageLoader;
 
 /**
  * Created by 莫绪旻 on 16/2/29.

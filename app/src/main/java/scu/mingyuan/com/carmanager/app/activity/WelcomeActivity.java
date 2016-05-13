@@ -20,7 +20,7 @@ import scu.mingyuan.com.carmanager.app.application.MyApplication;
 import scu.mingyuan.com.carmanager.app.baseactivity.BaseActivity;
 import scu.mingyuan.com.carmanager.app.bean.MyUser;
 import scu.mingyuan.com.carmanager.app.cache.UserCache;
-import scu.mingyuan.com.carmanager.app.util.MyImageLoader;
+import scu.mingyuan.com.carmanager.utils.MyImageLoader;
 
 /**
  * 描述:欢迎页 创建日期:2016/3/5

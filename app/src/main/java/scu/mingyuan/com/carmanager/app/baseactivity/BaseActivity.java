@@ -11,7 +11,7 @@ import android.view.WindowManager;
 
 import scu.mingyuan.com.carmanager.R;
 import scu.mingyuan.com.carmanager.app.application.ActivityCollector;
-import scu.mingyuan.com.carmanager.app.util.SystemBarTintManager;
+import scu.mingyuan.com.carmanager.utils.SystemBarTintManager;
 
 /**
  * Created by 莫绪旻 on 16/2/29.

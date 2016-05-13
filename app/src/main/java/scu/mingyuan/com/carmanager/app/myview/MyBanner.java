@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import scu.mingyuan.com.carmanager.R;
-import scu.mingyuan.com.carmanager.app.util.MyImageLoader;
+import scu.mingyuan.com.carmanager.utils.MyImageLoader;
 
 
 /**

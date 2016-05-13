@@ -28,7 +28,7 @@ import java.util.Date;
 import scu.mingyuan.com.carmanager.R;
 import scu.mingyuan.com.carmanager.app.baseactivity.BaseActivity;
 import scu.mingyuan.com.carmanager.app.bean.PetrolStation;
-import scu.mingyuan.com.carmanager.app.util.DensityUtil;
+import scu.mingyuan.com.carmanager.utils.DensityUtil;
 import scu.mingyuan.com.carmanager.zxing.encoding.EncodingHandler;
 
 /**
