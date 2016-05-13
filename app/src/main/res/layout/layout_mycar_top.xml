@@ -10,7 +10,7 @@
         android:layout_height="8dp"
         android:background="@color/transparent" />
 
-    <scu.mingyuan.com.carmanager.myview.MyBanner
+    <scu.mingyuan.com.carmanager.app.myview.MyBanner
         android:id="@+id/myBanner"
         android:layout_width="fill_parent"
         android:layout_height="160dp" />

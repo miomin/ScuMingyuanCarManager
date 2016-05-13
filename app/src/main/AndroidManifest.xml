@@ -36,7 +36,7 @@
     <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
 
     <application
-        android:name=".application.MyApplication"
+        android:name=".app.application.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -52,30 +52,30 @@
             android:process=":remote" />
 
         <activity
-            android:name=".activity.HomeActivity"
+            android:name=".app.activity.HomeActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.LoginActivity"
+            android:name=".app.activity.LoginActivity"
             android:label="@string/title_activity_login"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.RegisterActivity"
+            android:name=".app.activity.RegisterActivity"
             android:label="@string/title_activity_register"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.LoginActivity" />
+                android:value=".app.activity.LoginActivity" />
         </activity>
         <activity
-            android:name=".activity.MyCarDetailActivity"
+            android:name=".app.activity.MyCarDetailActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.HomeActivity" />
+                android:value=".app.activity.HomeActivity" />
         </activity>
         <activity
-            android:name=".activity.WelcomeActivity"
+            android:name=".app.activity.WelcomeActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -84,11 +84,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.MyCarDetailActivity"
+            android:name=".app.activity.MyCarDetailActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.HomeActivity" />
+                android:value=".app.activity.HomeActivity" />
         </activity>
         <activity
             android:name=".zxing.ericssonlabs.BarCodeTestActivity"
@@ -100,32 +100,32 @@
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name=".activity.QueryActivity"
+            android:name=".app.activity.QueryActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.HomeActivity" />
+                android:value=".app.activity.HomeActivity" />
         </activity>
         <activity
-            android:name=".activity.TrendLineChartActivity"
+            android:name=".app.activity.TrendLineChartActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.MyCarDetailActivity" />
+                android:value=".app.activity.MyCarDetailActivity" />
         </activity>
 
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".activity.PreOrderActivity" />
+        <activity android:name=".app.activity.PreOrderActivity" />
         <activity
-            android:name=".activity.SettingsActivity"
+            android:name=".app.activity.SettingsActivity"
             android:theme="@style/AppTheme.NoActionBar">
 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.HomeActivity" />
+                android:value=".app.activity.HomeActivity" />
         </activity>
     </application>
 

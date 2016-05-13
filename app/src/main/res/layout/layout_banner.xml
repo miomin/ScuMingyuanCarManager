@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
+    <merge
         android:layout_width="fill_parent"
         android:layout_height="160dp">
 
@@ -22,6 +22,6 @@
             android:layout_marginRight="15dp"
             android:orientation="horizontal"
             android:padding="3dp"></LinearLayout>
-    </RelativeLayout>
+    </merge>
 
 </LinearLayout>
