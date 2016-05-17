@@ -1,4 +1,4 @@
-package scu.mingyuan.com.carmanager.app.activity;
+package scu.mingyuan.com.carmanager.welcome;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -16,6 +16,8 @@ import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.listener.FindListener;
 import cn.bmob.v3.listener.SaveListener;
 import scu.mingyuan.com.carmanager.R;
+import scu.mingyuan.com.carmanager.app.activity.HomeActivity;
+import scu.mingyuan.com.carmanager.app.activity.LoginActivity;
 import scu.mingyuan.com.carmanager.app.application.MyApplication;
 import scu.mingyuan.com.carmanager.app.baseactivity.BaseActivity;
 import scu.mingyuan.com.carmanager.app.bean.MyUser;
